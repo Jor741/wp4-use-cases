@@ -1,0 +1,1 @@
+Write a mermaid script that creates detailed technical flows for all actors and  actions from the attached use case template for digital wallets. The technical flow should depict sequence of technical interactions and system input/output underlying the user journey.

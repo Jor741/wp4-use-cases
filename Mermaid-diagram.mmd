@@ -1,0 +1,102 @@
+sequenceDiagram
+    autonumber
+    participant M as Maria (User)
+    participant W as EUDIW (Wallet)
+    participant H as Hotel Website
+    participant RP as Hotel System (RP)
+    participant V as Verification Service
+    participant TI as Trusted Issuer List
+    participant PID as PID Issuer (Spain)
+    participant K as Hotel Kiosk
+
+    %% Pre-Arrival Phase
+    rect rgb(255, 240, 230)
+        Note over M,RP: Pre-Arrival: Pre-Check-in Initiation
+        RP->>M: Send pre-check-in invitation email (D-1)
+        M->>H: Click pre-check-in link
+        H->>RP: Request identity verification session
+        RP->>RP: Generate verification request
+        RP-->>H: Return verification request (QR/deep link)
+        H-->>M: Display verification request
+    end
+
+    %% Data Sharing Phase
+    rect rgb(240, 255, 240)
+        Note over M,V: Data Sharing: Wallet Interaction
+        M->>W: Open EUDIW (via deep link)
+        W->>RP: Establish secure connection
+        RP->>W: Request PID attributes (name, nationality, DOB)
+        W->>W: Display requested attributes (selective disclosure)
+        W-->>M: Show consent screen
+        M->>W: Authenticate (biometrics/PIN)
+        alt Authentication Successful
+            M->>W: Approve data sharing
+            W->>W: Create verifiable presentation
+            W->>PID: Retrieve signed PID attributes
+            PID-->>W: Return signed attributes
+            W->>W: Package VP with signatures
+            W->>RP: Send verifiable presentation
+        else Authentication Failed
+            W-->>M: Authentication error
+            M->>W: Retry or cancel
+        end
+    end
+
+    %% Verification Phase
+    rect rgb(255, 250, 240)
+        Note over RP,TI: Verification: Credential Validation
+        RP->>V: Forward VP for validation
+        V->>V: Extract credentials from VP
+        V->>TI: Query trusted issuer registry
+        TI-->>V: Return issuer public key/certificate
+        V->>V: Validate signature against issuer key
+        V->>V: Check credential expiration
+        V->>V: Verify credential integrity
+        
+        alt Credentials Valid
+            V-->>RP: Validation successful + extracted data
+            RP->>RP: Match identity with booking
+            RP->>RP: Update status: "pre-checked-in"
+            RP-->>M: Pre-check-in confirmation
+        else Invalid Signature (Unhappy Path 2)
+            V-->>RP: Signature validation failed
+            RP-->>M: Error: Invalid credentials
+            RP->>M: Request manual check-in
+        else Unverified Credentials (Unhappy Path 1)
+            V->>TI: Issuer not in trusted list
+            TI-->>V: Issuer not trusted
+            V-->>RP: Untrusted issuer error
+            RP-->>M: Error: Credentials not accepted
+            RP->>M: Request alternative verification
+        end
+    end
+
+    %% Arrival Phase
+    rect rgb(245, 240, 255)
+        Note over M,K: Arrival: Physical Check-in
+        M->>K: Approach hotel kiosk
+        M->>K: Scan QR code at kiosk
+        K->>RP: Retrieve guest status
+        RP->>RP: Lookup pre-check-in status
+        
+        alt Pre-checked-in
+            RP-->>K: Guest verified + room assignment
+            K->>K: Generate room key credentials
+            K->>W: Send digital room key to EUDIW
+            W-->>M: Room key received notification
+            K-->>M: Display room number + directions
+            M->>M: Proceed to room
+        else Not pre-checked-in
+            RP-->>K: No pre-check-in found
+            K-->>M: Please proceed to front desk
+        end
+    end
+
+    %% Optional: Booking Confirmation EAA
+    rect rgb(255, 245, 240)
+        Note over RP,W: Optional: Booking Confirmation EAA Issuance
+        RP->>W: Issue Booking Confirmation EAA
+        W->>W: Store EAA in wallet
+        W-->>M: EAA credential stored
+        Note over W: Links wallet to specific reservation
+    end
