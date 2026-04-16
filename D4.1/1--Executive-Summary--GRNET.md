@@ -1,4 +1,4 @@
-# 1. Executive Summary
+# Executive Summary
 
 This deliverable, D4.1 *UC Specifications and Scenarios*, is the first outcome of Work Package 4 (WP4) of the APTITUDE Large Scale Pilot Project. It documents the results of Task T4.2 (Stock-taking and Specifications), providing the complete set of use case specifications, business requirements, and interoperability requirements that will guide the pilot implementation (D4.2) and validation (D4.3) phases of WP4.
 
