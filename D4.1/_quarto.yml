@@ -16,6 +16,7 @@ book:
     - 7--Technical-Foundations--All-UC-leads-GRNET.qmd
     - 8--Description-of-the-Ecosystem-Actors-and-Roles--All-UC-leads-GRNET.qmd
     - 9--Challenges-and-Opportunities--All-UC-leads-GRNET.qmd
+    - 10--Conclusions-and-Next-Steps--GRNET.qmd
   appendices:
     - Annex-A--Detailed-Use-Case-Specification-Sheets--Each-UC-lead.qmd
     - Annex-B--List-of-WP4-Partners-and-Roles--GRNET.qmd
@@ -25,8 +26,14 @@ book:
 
 format:
   html:
+    number-depth: 3
+    toc: true
+    toc-depth: 4
+    toc-expand: 4
     theme:
       - cosmo
       - brand
   pdf:
     documentclass: scrreprt
+  docx:
+    reference-doc: template.docx

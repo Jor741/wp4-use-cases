@@ -1,4 +1,4 @@
-# 3. Methodology
+# Methodology
 
 This chapter describes how the content of D4.1 was produced during the T4.2 stock-taking phase of WP4. Its purpose is to make the working method behind the deliverable visible, so that readers can assess the rigour and completeness of the specifications that follow, and so that other Large Scale Pilots can, if they wish, replicate or adapt the approach.
 
