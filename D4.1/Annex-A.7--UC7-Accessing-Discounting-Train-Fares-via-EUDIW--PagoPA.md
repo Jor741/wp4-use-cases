@@ -53,7 +53,7 @@ NB: While this flow uses the Disability Card as a primary example, the logic rem
 6. Trenitalia verifies the digital signature and the integrity of the credentials using the Relying Party's public key.
 7. The system matches the verified identity with the booking details and unlocks the final payment step.
 
-'''mermaid
+```mermaid
     sequenceDiagram
     autonumber
     participant U as Mario (User)
@@ -96,7 +96,8 @@ NB: While this flow uses the Disability Card as a primary example, the logic rem
     Note over U,T: Error States
     R-->>U: Status not verified
     R-->>U: Credential read error
-    R-->>U: Credential invalid or expired'''
+    R-->>U: Credential invalid or expired
+```
 
 **Unhappy Paths**
 -----------
