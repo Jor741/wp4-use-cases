@@ -53,6 +53,51 @@ NB: While this flow uses the Disability Card as a primary example, the logic rem
 6. Trenitalia verifies the digital signature and the integrity of the credentials using the Relying Party's public key.
 7. The system matches the verified identity with the booking details and unlocks the final payment step.
 
+```mermaid
+    sequenceDiagram
+    autonumber
+    participant U as Mario (User)
+    participant W as EUDI Wallet
+    participant P as PID
+    participant D as Disability / Status Credential Issuer
+    participant R as Trenitalia (RP)
+    participant T as Trust Infrastructure
+
+    U->>R: Open app and browse journeys
+    R-->>U: Show trips and fares
+    U->>R: Select journey and request special fare
+    
+    R->>W: Send request for PID and status attrs
+    
+    W->>P: Fetch or refresh PID
+    P-->>W: Return PID
+    
+    W->>D: Fetch or refresh status credential
+    D-->>W: Return status credential
+    
+    W-->>U: Show requested attributes
+    U->>W: Select attrs and consent
+    U->>W: Biometric auth
+    
+    W->>R: Send verifiable presentation
+    
+    R->>T: Validate issuers and keys
+    T-->>R: Trust result
+
+    R-->>U: Show discounted fare and companion form
+    U->>R: Enter companion data
+    
+    R-->>U: Show discounted fare only
+    R-->>U: Show error and standard fare
+    U->>R: Confirm purchase
+    
+    R-->>U: Deliver discounted ticket or tickets (if accompanied)
+    
+    Note over U,T: Error States
+    R-->>U: Status not verified
+    R-->>U: Credential read error
+    R-->>U: Credential invalid or expired
+```
 
 **Unhappy Paths**
 -----------
