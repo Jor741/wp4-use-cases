@@ -53,14 +53,8 @@ NB: While this flow uses the Disability Card as a primary example, the logic rem
 6. Trenitalia verifies the digital signature and the integrity of the credentials using the Relying Party's public key.
 7. The system matches the verified identity with the booking details and unlocks the final payment step.
 
-# Trenitalia Booking Flow with Digital Credentials (PID & Status)
-
-This diagram illustrates the interaction between the User, the Digital Wallet, and the Trust Infrastructure during a discounted ticket purchase.
-
-## Sequence Diagram
-
-```mermaid
-sequenceDiagram
+'''mermaid
+    sequenceDiagram
     autonumber
     participant U as Mario (User)
     participant W as EUDI Wallet
@@ -96,15 +90,13 @@ sequenceDiagram
     R-->>U: Show discounted fare only
     R-->>U: Show error and standard fare
     U->>R: Confirm purchase
-
-    Note over U,R: Outcome Scenarios
     
     R-->>U: Deliver discounted ticket or tickets (if accompanied)
     
-    %% Error States
+    Note over U,T: Error States
     R-->>U: Status not verified
     R-->>U: Credential read error
-    R-->>U: Credential invalid or expired
+    R-->>U: Credential invalid or expired'''
 
 **Unhappy Paths**
 -----------
