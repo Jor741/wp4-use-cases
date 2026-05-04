@@ -1,4 +1,4 @@
-# 2. Introduction
+# Introduction
 
 This chapter introduces the deliverable, describing briefly what D4.1 is, why it exists, its place within the APTITUDE project, and how it should be navigated. It is written by GRNET, in its capacity as WP4 lead, and is intended to help readers navigate all that follow.
 
