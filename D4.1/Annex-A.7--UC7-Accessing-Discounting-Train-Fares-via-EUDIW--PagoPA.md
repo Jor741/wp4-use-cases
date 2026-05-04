@@ -53,6 +53,56 @@ NB: While this flow uses the Disability Card as a primary example, the logic rem
 6. Trenitalia verifies the digital signature and the integrity of the credentials using the Relying Party's public key.
 7. The system matches the verified identity with the booking details and unlocks the final payment step.
 
+'''mermaid
+sequenceDiagram
+  
+    actor U as Mario
+    participant W as Wallet
+    participant P as PID
+    participant D as StatusIssuer
+    participant R as Trenitalia
+    participant T as TrustInfra
+    
+    U-->R[Open app and browse journeys]
+    R-->U[Show trips and fares]
+    U-->R[Select journey and request special fare]
+    R-->R[Check if status credential needed]
+    R-->W[Send request for PID and status attrs]
+    W-->U[Show requested attributes]
+    U-->W[Select attrs and consent]
+    U-->W[Biometric auth]
+    W-->D[Fetch or refresh status credential]
+    D-->W[Return status credential]
+    W-->P[Fetch or refresh PID]
+    P-->W[Return PID]
+    W-->R[Send verifiable presentation]
+    R-->T[Validate issuers and keys]
+    T-->R[Trust result]
+    |alt Eligibility OK|
+        R-->R: [Apply reduced fare]
+        |alt Companion allowed|
+            R-->>U: [Show discounted fare and companion form]
+            U-->R: [Enter companion data]
+            R-->R: [Bind companion to trip]
+        |else No companion|
+            R-->U: [Show discounted fare only]
+        end
+    |else Eligibility KO|
+        R-->U: [Show error and standard fare]
+    end
+    U-->R: [Confirm purchase]
+    R-->R: [Finalize booking and payment]
+    |alt Companion present|
+        R-->R: [Generate ticket for companion]
+    end
+    R-->U: [Deliver discounted ticket or tickets]
+    |alt Status not verified|
+        R-->U: [Status not verified]
+    |else Credential read error|
+        R-->U: [Credential read error]
+    |else Credential invalid or expired|
+        R-->U: [Credential invalid or expired]
+    end'''
 
 **Unhappy Paths**
 -----------
