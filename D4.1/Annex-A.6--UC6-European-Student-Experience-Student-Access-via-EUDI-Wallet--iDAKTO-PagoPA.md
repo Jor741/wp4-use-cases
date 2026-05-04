@@ -61,12 +61,85 @@ _Phase 1: online check_
 4. The EUDIW creates a verifiable presentation containing the signed European student Attestation attributes and sends it to Airweb backend.
 5. Airweb/Irigo verify the digital signature and the integrity of the credential using the Relying Party's public key.
 6. Once the student status is confirmed, the system applies the discount and unlocks the final payment step.
+
+# Student Verification & Access Control Flow
+
+This document describes the interaction between the Student, the EUDI Wallet, and the Service Providers for both online discounts and physical access.
+
+## 1. Online Check — Student Discount Eligibility
+
+```mermaid
+   sequenceDiagram
+    autonumber
+    actor S as Student
+    participant AW as Airweb/Trainpal (UI)
+    participant BE as Airweb/Trainpal Backend
+    participant W as EUDI Wallet (EUDIW)
+    participant V as Verifier / RP Verifier
+
+    Note over AW,BE: Phase 1 — Online check (Student discount eligibility)
+
+    AW->>BE: Initiate student discount eligibility check
+    BE->>W: Send VP request for European Student Card attributes
+    
+    W-->>S: Wallet prompt: "Share European Student Card attributes?"
+    S->>W: Authenticate (biometrics) + Approve sharing
+
+    W->>W: Build Verifiable Presentation (VP)
+    W->>BE: Submit VP to backend
+
+    BE->>V: Verify signature + integrity
+    V-->>BE: Verification result (extracted attributes)
+
+    alt Student status confirmed
+        BE-->>AW: Eligibility = OK → apply discount
+        AW-->>S: Discount applied, payment step unlocked
+    else Not confirmed / verification failed
+        BE-->>AW: Eligibility = KO → no discount
+        AW-->>S: Continue without discount (or retry)
+    end
+```
    
 _Phase 2: proximity check_
 1. In order to access to the library or restricted areas, GYSC requires an identity verification for students. 
 2. The students show their QR-code with their EUDIW and share the specific attributes required by authenticating to their wallet.
 3. The EUDIW creates a verifiable proximity presentation containing the signed ESC attributes and sends it to the GYSC backend.
 4. The GYSC system validates the attestation in real-time; upon successful verification, the gate is unlocked and access is granted.
+
+```mermaid
+   sequenceDiagram
+    autonumber
+    actor S as Student
+    participant W as EUDI Wallet (EUDIW)
+    participant G as GYSC Access Control System
+    participant B as GYSC Backend (Verifier)
+    participant T as Trust Framework
+
+    Note over G,S: Student approaches library gate
+
+    G->>S: Request identity verification for access
+    S->>W: Open wallet and initiate proximity sharing (QR/NFC)
+
+    G->>W: Send presentation request (ESC attributes)
+    W-->>S: Prompt for biometric authentication + consent
+    S->>W: Authenticate (biometric) and approve sharing
+
+    W->>W: Create Verifiable Proximity Presentation (VP)
+    W->>B: Send VP to GYSC backend (proximity channel)
+
+    B->>T: Retrieve issuer public key / metadata
+    T-->>B: Public key / metadata
+    B->>B: Verify signature and validity of ESC attestation
+
+    alt Verification successful
+        B-->>G: Access granted
+        G->>G: Unlock gate
+        G-->>S: Entry authorized
+    else Verification failed
+        B-->>G: Access denied
+        G-->>S: Entry refused
+    end
+```
 
 **Unhappy Paths**
 -----------
