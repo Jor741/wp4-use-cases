@@ -58,6 +58,57 @@ _Phase 2: proximity check_
 8. Anna authenticates via biometrics to her EUDI Wallet to display the secure QR code representing her PID/DTC.
 9. The conductor scans the QR code using a verification device, which confirms the identity match against the existing reservation in real-time.
 
+```mermaid
+    sequenceDiagram
+    autonumber
+    actor U as Anna (User)
+    participant W as EUDI Wallet
+    participant P as PID Issuer
+    participant R as Trenitalia (RP/Verifier)
+    participant T as Trust Infrastructure
+
+    Note over U, T: Phase 1: Online Purchase
+    U->>R: Browse trips and select cross-border journey
+    R-->>U: Show fare options and cabin selection
+    U->>R: Confirm trip and request special cabin service
+    
+    R->>W: Send request for PID and status attrs
+    W->>P: Fetch or refresh status credential
+    P-->>W: Return status credential
+    
+    W-->>U: Show requested attributes
+    U->>W: Select attrs and consent
+    U->>W: Biometric auth
+    
+    W->>R: Send verifiable presentation
+    R->>T: Validate issuers and keys
+    T-->>R: Trust result
+    
+    R-->>U: Show fare and dedicated cabin
+    U->>R: Confirm and finalise purchase
+    R-->>U: Deliver ticket or tickets
+
+    alt Error Scenarios
+        R-->>U: Status not verified / Read error / Expired
+    end
+
+    Note over U, T: Phase 2: On-board Verification
+    R->>U: On-board verifier asks for PID
+    U-->>R: Presents QR code
+    R->>W: Request for PID
+    
+    W-->>U: Show requested attributes
+    U->>W: Select attrs and consent
+    U->>W: Biometric auth
+    
+    W->>P: Fetch or refresh status credential
+    P-->>W: Return status credential
+    
+    W->>R: Send verifiable presentation
+    R->>T: Validate issuers and keys
+    T-->>R: Trust result
+    R-->>U: PID Verified
+```
 
 **Unhappy Paths**
 -----------
