@@ -516,7 +516,7 @@ The following indicators should be tracked, aligned where relevant with wider WP
 
 ## Testing Procedures
 
-Testing of SEDIT-X should be conducted through the APTITUDE **Interoperability Test Bed+ (ITB+)** established under WP4, which acts as the common technical and governance environment for validating interoperability, conformance, and end-to-end functionality across partners.
+Testing of SEDIT-X should be conducted through the APTITUDE **Interoperability Test Bed+ (ITB+)** established under WP2, which acts as the common technical and governance environment for validating interoperability, conformance, and end-to-end functionality across partners.
 
 Testing should cover at least:
 
