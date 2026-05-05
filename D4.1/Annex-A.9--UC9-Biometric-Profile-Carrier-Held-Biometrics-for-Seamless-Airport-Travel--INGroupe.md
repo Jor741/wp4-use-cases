@@ -150,6 +150,7 @@ A final biometric verification confirms the passenger’s identity and boarding 
 
 see mermaid sequence diagram and you can find component diagram as well
 
+```mermaid
 sequenceDiagram
   
   participant U as 👤 User
@@ -186,7 +187,7 @@ sequenceDiagram
   AW->>BPI: Start Preauth flow (OpenID4VCI)
   BPI-->>AW: Issue Biometric Profil Credential
   AW-->U: Success Issuance
- 
+``` 
 
 
 ***Unhappy paths:***
