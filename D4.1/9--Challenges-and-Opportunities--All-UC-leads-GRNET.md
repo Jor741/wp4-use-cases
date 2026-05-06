@@ -1,4 +1,4 @@
-# 9. Challenges and Opportunities
+# Challenges and Opportunities
 
 This chapter steps back from the specifications and reflects on potential pifralls, what is uncertain, and what lies ahead for WP4. Its purpose is to give an honest assessment, distinguishing between **risks** that the consortium has identified and is actively mitigating, and **opportunities** in the form of future directions and open questions that point beyond the current project phase.
 
@@ -10,8 +10,6 @@ Two adjacent and complementary concepts are used in this part of the deliverable
 * An **open issue**, in the sense of Section 10.2, is a *concrete item awaiting a decision or an action* before or during the implementation phase. Open issues are not hypothetical; they are known gaps or unresolved questions that the consortium must close.
 
 A particular topic may appear in both lists, with its risk dimension treated in 9.1 and its decision dimension treated in 10.2.
-
-### Structure of the chapter
 
 The chapter is organised into two sections, each addressing one closing dimension of the analysis.
 
