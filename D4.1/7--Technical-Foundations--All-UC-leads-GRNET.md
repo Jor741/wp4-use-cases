@@ -8,7 +8,7 @@ Describing all of this once, at the chapter level, has three benefits:
 * **Consistency.** A single authoritative description of the technical foundations ensures that all 11 UCs use the same vocabulary, protocol names, and interpretation of the ARF.
 * **Traceability.** Implementation teams working on preparing the pilot in D4.2, and validation teams working on D4.3, can trace a concrete design decision back to the foundational choice that motivated it.
 
-## Chapter structure
+**Chapter structure**
 
 The chapter is organised into six sections, each addressing one aspect of the technical substrate. 
 
@@ -19,11 +19,9 @@ The chapter is organised into six sections, each addressing one aspect of the te
 * **Section 7.5 — Trust Framework and Trusted Issuer Lists.** Describes how WP4 relying parties determine whether a presented credential is trustworthy. The cross-cutting description covers the trusted-list machinery established by Implementing Regulation (EU) 2024/2980, signature validation, and cross-border trust-chain resolution. The per-UC subsections (7.5.1 through 7.5.11) document the trust anchors relied on by each UC.
 * **Section 7.6 — Standards and Protocols.** Lists the specific technical standards and protocols used across WP4 use cases, including OpenID4VCI for issuance, OpenID4VP for presentation, ISO/IEC 18013-5 for the mdoc proximity flow, SD-JWT VC for the JSON-based remote flow, and sector-specific standards. The per-UC subsections (7.6.1 through 7.6.11) indicate which standards each UC implements and to which profile version.
 
-### How this chapter was produced
-
 The chapter is the joint output of the 11 UC leads and the WP4 coordinator (GRNET). Each UC lead contributed the technical content specific to its use case, through the UC specification template (Section 3.4). GRNET then extracted the recurring patterns into the cross-cutting descriptions at the top of each section, leaving UC-specific content in the per-UC subsections. Where the UC leads collectively agreed on a convention that applies to all 11 UCs (for example, the choice of Mermaid for sequence diagrams, or the preference for SD-JWT VC in remote flows), that convention is documented once at the section level.
 
-### Dependencies on other Work Packages
+**Dependencies on other Work Packages**
 
 Three dependencies on other APTITUDE Work Packages are inherited by this chapter and should be kept in mind while reading it.
 
