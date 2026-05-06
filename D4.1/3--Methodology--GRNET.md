@@ -7,7 +7,7 @@ The methodology behind D4.1 is the combined result of three activities that ran 
 The diagram below summarises the process that led from the initial UC ideas to the detailed specifications presented in this deliverable. Blue steps are activities owned by the individual UC leads; orange steps are coordination activities owned by GRNET acting as the WP4 coordinator; green steps represent the three state transitions of the UC set (initial pool, final accepted set, and detailed specifications).
 
 ```mermaid
-%% fig-width: 100px
+%%| fig-width: 100px
 flowchart TD
     A["UC Leads propose initial use case ideas"] --> B["UC Leads identify and engage the required partners<br/>(credential issuers, relying parties, wallet providers, ...)"]
     B --> C["Initial pool: 28 candidate use cases"]
