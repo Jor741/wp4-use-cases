@@ -1,12 +1,8 @@
-# 10. Conclusions and Next Steps
+# Conclusions and Next Steps
 
-This final chapter closes D4.1 with a summary of what has been specified and a forward-looking view of the activities that will carry the work of WP4 into its subsequent phases. It answers two questions: *what has D4.1 actually delivered?* and *what happens next, and when?*
+This final chapter closes D4.1 with a summary of what has been specified and a forward-looking view of the activities that will carry the work of WP4 into its subsequent phases. It answers two questions: *what has D4.1 actually delivered?* and *what happens next, and when?* Chapter 10 is deliberately short. The substance of D4.1 is carried by the preceding chapters, from the use case specifications in Chapter 4 to the technical foundations in Chapter 7 and the actor mapping in Chapter 8. The function of Chapter 10 is to *close the loop*: to recap the specified use cases at the right level of abstraction for an executive reader, to capture the open items that must be resolved before the pilot can move forward, and to set out the path to the next two WP4 deliverables, D4.2 (Implementation Manual, due at Milestone 15, M18) and D4.3 (Validation Report, due at Milestone 16, M22).
 
-### Position of this chapter in the deliverable
-
-Chapter 10 is deliberately short. The substance of D4.1 is carried by the preceding chapters, from the use case specifications in Chapter 4 to the technical foundations in Chapter 7 and the actor mapping in Chapter 8. The function of Chapter 10 is to *close the loop*: to recap the specified use cases at the right level of abstraction for an executive reader, to capture the open items that must be resolved before the pilot can move forward, and to set out the path to the next two WP4 deliverables, D4.2 (Implementation Manual, due at Milestone 15, M18) and D4.3 (Validation Report, due at Milestone 16, M22).
-
-### Structure of the chapter
+**Structure of the chapter**
 
 The chapter is organised into four sections, each addressing one closing dimension of the deliverable.
 
