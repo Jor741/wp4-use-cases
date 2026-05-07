@@ -24,8 +24,6 @@ More specifically, the use case focuses on:
 - **EUDI wallet-based boarding** that remains accessible and inclusive for all traveller demographics;
 
 
----
-
 ### UC User Story
 
 #### Episode 1. Verify digital identity to collect Advance Passenger Information(API) during self-service check-in 
@@ -38,8 +36,6 @@ As an airline passenger, I want to verify my digital identity using my EUDI Wall
 As an airline passenger, I want to board the flight without needing to show a boarding pass or physical passport, so that I can simply tap and go using my EUDI Wallet, letting the airline verify my digital identity and confirm my boarding pass status seamlessly.
 
 
-
----
 
 ### Actors
 
@@ -70,8 +66,6 @@ As an airline passenger, I want to board the flight without needing to show a bo
 
 - **Hannah from Helsinki** — EU national, holding EUDIW with DTC or PID
 
----
-
 ### Context and Preconditions
 
 The following conditions are assumed for the use case to begin:
@@ -89,8 +83,6 @@ The following conditions are assumed for the use case to begin:
 
 - All participating parties operate within a common trust, legal, and interoperability framework aligned with the **EUDI Wallet Architecture and Reference Framework (ARF)** and **eIDAS 2.0**.
 
----
-
 ### Credentials Involved
 
 1. **Person Identification Data (PID)**
@@ -99,8 +91,6 @@ The following conditions are assumed for the use case to begin:
 2. **Digital Travel Credential (DTC)**
    A wallet-stored verifiable credential representing a digital equivalent of a passport.  It contains MRZ-compatible attributes and a portrait reference suitable for 1:1 biometric matching at the gate.
 
-
----
 
 ### User Journey (Business Flow of Events)
 
@@ -138,8 +128,6 @@ The following conditions are assumed for the use case to begin:
 20. **Boarding Authorization:** The DCS confirms the passenger is valid, the boarding pass status = OK, and returns Boarding Authorization = YES to the eGate.
 21. **Gate Opens:** The eGate opens automatically, the DCS is updated with segment status = Boarded.
 22. **Fallback Path:** If face match fails or token validation errors occur, the gate displays an error message and redirects the passenger to a human agent for manual processing.
-
----
 
 ### Technical Flow
 
@@ -193,8 +181,6 @@ Used as primary flow in **Episode 2 (Boarding gate)**.
   - Face match OK → boarding pass found → DCS updates passenger status to "Boarded" → gate opens.
   - No match or token validation error → gate displays error message and redirects passenger to a human agent.
 - **Continuity with Episode 1:** Because traveler already checked in via EUDIW in Episode 1
-
----
 
 ### Flow Diagrams
 

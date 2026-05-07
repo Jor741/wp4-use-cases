@@ -18,6 +18,9 @@ Deliverable D4.1 is split into different files, named as follows:
 The rules above guarantee that the file naming is consistent with the
 final document structure.
 
+Regarding the allowed Markdown syntax, do not use `---` syntax
+(horizontal lines).
+
 ## Documentation builder
 
 ### Docker-based process

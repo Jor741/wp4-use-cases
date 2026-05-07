@@ -27,8 +27,6 @@ More specifically, the use case focuses on:
 - **privacy-preserving verification**, including **1:1 biometric verification** in airport scenarios where applicable; and
 - **wallet-mediated payments** where the pilot includes payment-enabled steps.
 
----
-
 ## UC User Story
 
 ### Persona 1 – Flight Passenger
@@ -63,8 +61,6 @@ As a student travelling to the University of the Aegean or another ERUA institut
 
 As a digitally native traveller, I want to use the EUDI Wallet as a one-stop interaction channel for identity, travel entitlements, and selected payments, so that my journey is simpler, faster, and more privacy-preserving.
 
----
-
 ## Actors
 
 ### Credential Issuers
@@ -94,8 +90,6 @@ As a digitally native traveller, I want to use the EUDI Wallet as a one-stop int
 - **Decentralized Travel Booking Network / booking-state layer** may support dynamic booking-state management and synchronisation across suppliers in parts of the use case where such capability is piloted.
 - **Technology providers** may supply issuance, verification, orchestration, proximity, or integration components needed by the participating partners.
 
----
-
 ## Context and Preconditions
 
 The following conditions are assumed for the use case to begin:
@@ -113,8 +107,6 @@ The following conditions are assumed for the use case to begin:
 - Payment integration is available for the scenarios where the pilot uses wallet-mediated payment authorisation.
 - The University of the Aegean or another participating academic institution can verify the required academic credentials for campus access.
 - All participating parties operate within a common trust, legal, and interoperability framework aligned with the EUDI Wallet architecture.
-
----
 
 ## Credentials Involved
 
@@ -147,8 +139,6 @@ The following conditions are assumed for the use case to begin:
 
 10. **Optional stay or access credentials**  
    In more advanced hospitality or university variants, SEDIT-X may explore additional credentials for room access, proof of stay, or service entitlements.
-
----
 
 ## User Journey (Business Flow of Events)
 
@@ -209,8 +199,6 @@ The following conditions are assumed for the use case to begin:
 36. The traveller presents student or alliance-related credentials from the wallet.
 37. The university verifies the credentials and grants access to the relevant campus services, facilities, or events.
 38. The journey concludes with the traveller onboarded into the academic environment without additional paper-based onboarding steps.
-
----
 
 ## Technical Flow
 
@@ -309,8 +297,6 @@ The university episode follows the same general wallet logic:
 - the wallet performs selective disclosure,
 - the verifier validates trust, integrity, status, and freshness,
 - the verified result is used to grant federated access to campus services and facilities.
-
----
 
 ## Flow Diagrams
 
@@ -414,8 +400,6 @@ sequenceDiagram
   UniRP-->>User: Access granted
 ```
 
----
-
 ## Unhappy Paths
 
 1. **Wallet not installed / not activated**  
@@ -483,8 +467,6 @@ sequenceDiagram
     Outcome: Fully automated self-service flow is not possible.  
     Fallback: Assisted or partially integrated hotel flow.
 
----
-
 ## Success Criteria
 
 The SEDIT-X UC will be considered successful if the pilot demonstrates most of the following:
@@ -495,8 +477,6 @@ The SEDIT-X UC will be considered successful if the pilot demonstrates most of t
 4. Wallet-mediated payment interactions succeed reliably in the scenarios where they are piloted.
 5. The pilot provides practical evidence that the EUDI Wallet can operate as a common interaction channel across transport, hospitality, and higher education.
 6. At least one realistic end-to-end traveller journey can be demonstrated across multiple episodes of the UC.
-
----
 
 ## Business KPIs
 
@@ -511,8 +491,6 @@ The following indicators should be tracked, aligned where relevant with wider WP
 - number of cross-border or multi-domain interactions supported;
 - number of dynamic booking or entitlement-state updates, where applicable;
 - number of manual fallbacks triggered, by episode and reason.
-
----
 
 ## Testing Procedures
 
@@ -533,8 +511,6 @@ Testing should cover at least:
 
 Where possible, testing should include both **component-level** and **end-to-end journey-level** validation.
 
----
-
 ## Legal and Regulatory Aspects
 
 SEDIT-X must operate within the European framework for **digital identity, privacy, and electronic transactions**, with particular reference to **eIDAS 2.0**, the **EUDI Wallet Architecture and Reference Framework**, and sector-specific rules applicable to transport, hospitality, payments, and student mobility.
@@ -550,8 +526,6 @@ Key legal and regulatory considerations include:
 - **biometric processing constraints** for airport scenarios.
 
 In airport use cases, biometric processing must remain strictly limited to **1:1 verification** scenarios. No **1:N identification** or large-scale centralised biometric matching should be part of the UC baseline.
-
----
 
 ## Key Challenges and Considerations
 
@@ -571,8 +545,6 @@ In airport use cases, biometric processing must remain strictly limited to **1:1
 - **Biometric quality and fallback handling:** airport biometric steps must not create disproportionate friction or operational failure.
 - **Dynamic state management:** where dynamic booking-state or entitlement-state updates are explored, clear system boundaries and consistency rules are needed.
 - **Replay and freshness protection:** all verifier flows must correctly handle nonce, audience, validity period, and related anti-replay controls.
-
----
 
 ## Notes on Scope
 
