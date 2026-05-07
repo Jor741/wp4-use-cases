@@ -1,6 +1,6 @@
 ## UC 1: Board the flight (Amadeus)
 
-## Use Case Summary
+### Use Case Summary
 
 The **Board the Flight** use case demonstrates how the **EUDI Wallet** can support a continuous, privacy-preserving, and end-to-end air-travel passenger journey, from **online check-in** at home to **physical boarding at the airport gate**. 
 
@@ -26,14 +26,14 @@ More specifically, the use case focuses on:
 
 ---
 
-## UC User Story
+### UC User Story
 
-### Episode 1. Verify digital identity to collect Advance Passenger Information(API) during self-service check-in 
+#### Episode 1. Verify digital identity to collect Advance Passenger Information(API) during self-service check-in 
 
 As an airline passenger, I want to verify my digital identity using my EUDI Wallet during self-service online check-in, so that I can automatically fill in my passport/ID details, skip manual data entry, and complete check-in faster and more securely.
 
 
-### Episode 2. Tap & go to Board the flight ( 1:1 match) using EUDIW
+#### Episode 2. Tap & go to Board the flight ( 1:1 match) using EUDIW
 
 As an airline passenger, I want to board the flight without needing to show a boarding pass or physical passport, so that I can simply tap and go using my EUDI Wallet, letting the airline verify my digital identity and confirm my boarding pass status seamlessly.
 
@@ -41,21 +41,21 @@ As an airline passenger, I want to board the flight without needing to show a bo
 
 ---
 
-## Actors
+### Actors
 
-### Credential Issuers
+#### Credential Issuers
 
 - **National PID issuers** to issue the Person Identification Data (PID) credential used as the root identity credential in the journey.
 - **National authorities issuing Digital Travel Credentials (DTC)** issue DTC credentials usable for any travel scope, including beyond intra-Schengen.
 
 
-### Relying Parties / Verifiers
+#### Relying Parties / Verifiers
 
 - **Airline online check-in system (airline.com, e.g., LHG or Finnair)** acts as Verifier during Episode 1 (SSCI), requesting verified identity attributes for API collection.
 .
 - **Airline boarding gate (eGate) at airport** act as Verifier during Episode 2, performing proximity-based credential verification and 1:1 biometric matching.
 
-### Intermediary / Coordination Actors
+#### Intermediary / Coordination Actors
 
 - **Amadeus Wallet Services** acts as the wallet integration layer for the airline, generating verification requests, signing them with airline certificates, validating verifiable presentations, and providing session-status APIs to the airline frontend.
 - **Wallet provider (EUDI wallet)** delivers the wallet used by travellers 
@@ -65,14 +65,14 @@ As an airline passenger, I want to board the flight without needing to show a bo
 
 - **Airport partners** Airport operators in partnership with airlines to coordinate airport operations such as board the flight 
 
-### End Users
+#### End Users
 
 
 - **Hannah from Helsinki** — EU national, holding EUDIW with DTC or PID
 
 ---
 
-## Context and Preconditions
+### Context and Preconditions
 
 The following conditions are assumed for the use case to begin:
 
@@ -91,7 +91,7 @@ The following conditions are assumed for the use case to begin:
 
 ---
 
-## Credentials Involved
+### Credentials Involved
 
 1. **Person Identification Data (PID)**
    A high-assurance identity credential issued by a national authority  and stored in the EUDI Wallet. It is used for identity verification at SSCI and as the root identity at the boarding gate. For **intra-Schengen** travel, the PID is sufficient as a digital identity credential.
@@ -102,15 +102,15 @@ The following conditions are assumed for the use case to begin:
 
 ---
 
-## User Journey (Business Flow of Events)
+### User Journey (Business Flow of Events)
 
-### Phase 0 – Pre-requisites
+#### Phase 0 – Pre-requisites
 
 1. The traveller installs and activates a conformant EUDI Wallet on their smartphone.
 2. The traveller obtains a PID credential from their national authority and stores it in the wallet. Optionally, they also store a DTC
 3. The traveller books a flight with the participating airline.  The booking is eligible for self-service check-in and eligible for API collection.
 
-### Phase 1 – Episode 1: Collect API at Self-Service Online Check-In (SSCI)
+#### Phase 1 – Episode 1: Collect API at Self-Service Online Check-In (SSCI)
 
 4. **Pre-Departure Invitation:** A day before the trip, the traveller receives an email from the airline inviting them to "check in online using your Digital Identity Wallet."
 5. **Initiating SSCI:** The traveller clicks the link, which opens the airline's check-in website (airline.com).
@@ -124,7 +124,7 @@ The following conditions are assumed for the use case to begin:
 11. **API Update:** The DCS validates extracted claims against the booking record (name match, expiration date vs. journey date, etc.) and updates the passenger record with **API regulatory data**.
 12. **Outcome:** The traveller is successfully checked in. A boarding pass entitlement is recorded in the DCS, and the digital identity is linked to the passenger record for downstream airport processes. **No manual passport data entry was required.**
 
-### Phase 2 – Episode 2: Tap & Go to Board the Flight
+#### Phase 2 – Episode 2: Tap & Go to Board the Flight
 
 13. **Arrival at the Gate:** The traveller arrives at the boarding gate (e.g., Mark at the LHG gate for the FRA → NCE flight, or Hannah at her Finnair gate). Signage explains that passengers can board using their EUDIW digital identity only — no boarding pass display required.
 14. **Engagement at the eGate:** The traveller is offered two engagement options:
@@ -141,11 +141,11 @@ The following conditions are assumed for the use case to begin:
 
 ---
 
-## Technical Flow
+### Technical Flow
 
 The use case reuses common wallet interaction patterns across both episodes, combined with airline-specific integrations (Amadeus Wallet Services, Amadeus DCS) and gate-specific biometric subsystems.
 
-### Common Pattern A – Wallet-Based Verification (OID4VP-style, online channel)
+#### Common Pattern A – Wallet-Based Verification (OID4VP-style, online channel)
 
 Used in **Episode 1 (SSCI)** 
 
@@ -159,7 +159,7 @@ Used in **Episode 1 (SSCI)**
 8. The airline frontend polls session status until completed/failed/timeout.
 9. On success, extracted data is forwarded to the DCS for booking matching and regulatory data update.
 
-### Common Pattern B – Wallet-Based Verification (ISO 18013-5 Proximity, offline-capable)
+#### Common Pattern B – Wallet-Based Verification (ISO 18013-5 Proximity, offline-capable)
 
 Used as primary flow in **Episode 2 (Boarding gate)**.
 
@@ -170,9 +170,9 @@ Used as primary flow in **Episode 2 (Boarding gate)**.
 5. The wallet returns an encrypted, signed response over the proximity channel.
 6. The eGate decrypts, validates, and extracts claims.
 
-### Episode-Specific Technical Highlights
+#### Episode-Specific Technical Highlights
 
-#### Episode 1 – Collect API at SSCI
+##### Episode 1 – Collect API at SSCI
 
 - **Verifier:** Airline online check-in system (airline.com), backed by **Amadeus Wallet Services** for protocol handling.
 - **Desktop or mobile are both supported:** via QR (desktop) or deep link (mobile).
@@ -183,7 +183,7 @@ Used as primary flow in **Episode 2 (Boarding gate)**.
 - **DCS integration:** After successful validation, the airline frontend asks the DCS to verify extracted data against the booking record (using wallet session ID). The DCS retrieves extracted claims from Amadeus Wallet Services, validates against the booking (name check, expiration vs. journey date), updates regulatory API data, and confirms check-in completion.
 
 
-#### Episode 2 – Tap & Go Boarding
+##### Episode 2 – Tap & Go Boarding
 
 - **Verifier:** Airport boarding gate (eGate / RP).
 - **Engagement:** NFC or QR code using bluetooth
@@ -196,7 +196,7 @@ Used as primary flow in **Episode 2 (Boarding gate)**.
 
 ---
 
-## Flow Diagrams
+### Flow Diagrams
 
 
 
