@@ -16,4 +16,4 @@ The chapter is organised into three sections, each addressing one of the three a
 
 * **Section 5.1 — Current Processes and Existing Implementations** describes how each of the three sectors currently handles the processes that WP4 aims to transform with the EUDIW.
 * **Section 5.2 — Identity Matching and Management** analyses how organisations in each sector currently match a person to their booking, ticket, or enrolment. 
-* **Section 5.3 — Current Constraints, Limitations and Pain Points** synthesises the pain points that emerge from Sections 5.1 and 5.2 into a consolidated view. 
+* **Section 5.3 — Current Constraints, Limitations and Pain Points** cover the pain points in a per-UC basis.
