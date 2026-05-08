@@ -4,5 +4,6 @@ index.qmd
 *--*.qmd
 *~
 
+/_book/
 /.quarto/
 **/*.quarto_ipynb

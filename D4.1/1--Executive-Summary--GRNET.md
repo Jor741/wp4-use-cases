@@ -6,7 +6,7 @@ This deliverable, D4.1 *UC Specifications and Scenarios*, is the first outcome o
 
 WP4 is responsible for piloting **tickets and check-in** use cases using the European Digital Identity Wallet (EUDIW). Its scope covers three interconnected scenarios (sectors): transport, hospitality, and student mobility. In these scenarios, identity verification and credential presentation are central to the user experience. The overarching objective of WP4 pilots is to demonstrate that the EUDIW, loaded with a Person Identification Data (PID) credential and sector-specific Electronic Attestations of Attributes (EAAs), can successfully replace fragmented, paper-based, and proprietary identity processes with an experience that is user friendly, seamless, privacy-preserving, and cross-border.
 
-## Three Scenarios
+## WP4 Scenarios
 
 The WP4 use cases are organised into three scenarios, reflecting real-world, end-to-end user journeys:
 
@@ -16,9 +16,9 @@ The WP4 use cases are organised into three scenarios, reflecting real-world, end
 
 Several use cases span multiple scenarios: a single traveller may combine air travel, land transport, hotel accommodation, and academic activities in a single cross-border journey.
 
-### The 11 Use Cases
+### WP4 Use Cases
 
-WP4 consists of 11 accepted use cases, each led by one or more  designated partner organisations. They range from single-touchpoint interactions (e.g., UC 5 Stadium Access) to multi-episodic journeys (e.g., UC 3 SEDIT-X, which encompasses biometric airport boarding, urban mobility, ferry transport, hospitality, and academic access). Together, the wide set of Use Cases covers air, rail, ferry, bus, and urban transport; hotel check-in across multiple Member States; and student mobility within Europe and beyond.
+WP4 consists of 11 use cases, each led by one or more  designated partner organisations. They range from single-touchpoint interactions (e.g., UC 5 Stadium Access) to multi-episodic journeys (e.g., UC 3 SEDIT-X, which encompasses biometric airport boarding, urban mobility, ferry transport, hospitality, and academic access). Together, the wide set of Use Cases covers air, rail, ferry, bus, and urban transport; hotel check-in across multiple Member States; and student mobility within Europe and beyond.
 
 ## Key Findings from the Stock-Taking Phase
 
@@ -32,7 +32,7 @@ The T4.2 stock-taking analysis of existing processes, identity management practi
 
 ## Cross-Border Interoperability
 
-Cross-border operation is a "master" requirement for APTITUDE and for WP4 in particular. The use cases involve travellers, guests, and students moving between France, Spain, Italy, Greece, and, in the case of UC 11, Canada. Specifically, key interoperability considerations include:
+Cross-border operation is a "master" requirement for APTITUDE and for WP4 in particular. The use cases involve travellers, guests, and students moving between EU countries, and, in the case of UC 11, Canada. Specifically, key interoperability considerations include:
 
 * **PID cross-border verification:** Relying parties in one Member State must be able to verify PIDs issued by another Member State, relying on the trust framework and trusted issuer lists provided by WP2.
 * **Credential format consistency:** WP4 use cases must work with both mdoc and SD-JWT credential formats, as specified by the ARF implementation profiles. The WP2 testbed will be used for conformance and interoperability testing.
