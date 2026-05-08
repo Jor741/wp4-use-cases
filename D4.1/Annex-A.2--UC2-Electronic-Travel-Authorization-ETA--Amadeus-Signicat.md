@@ -25,3 +25,10 @@ Context and pre-conditions
 Travellers can share via an EU Digital Identity Wallet their Electronic Travel Authorization (ETA) status with transport providers (airlines, ferry companies) to verify they are permitted to board, often using a QR code or NFC-based sharing feature, ensuring the data is accurate. This will result in a seamless, integrated and user friendly travel experience: Beyond just the ETA, the wallet can store linked travel documents, such as digital boarding passes, and be used for hotel reservations, creating a fully, digital, check-in process. Finally, via the wallet, the ETA can be presented as an Electronic Attestation of Attributes (EAA), allowing automated verification of the traveller without having to reveal unnecessary personal information in a standardised manner. Moreover, the traveller retains control over which information to share with which party.
 
 Technical flow
+
+<img width="626" height="704" alt="image" src="https://github.com/user-attachments/assets/c13020bb-c6bb-4f95-815f-21347843edb9" />
+
+Business KPI's
+- Succesful completion of ETA process with a conversion rate of 90%
+- Travel user experience: user friendly and intuitive 
+
