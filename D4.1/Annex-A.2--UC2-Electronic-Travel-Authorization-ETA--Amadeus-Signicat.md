@@ -1,9 +1,5 @@
 ## UC 2: Electronic Travel Authorization (ETA) (Amadeus-Signicat)
 
-### Use case: Seamless Electronic Travel Authorization (ETA)
-
-### Use case leads: Amadeus and Signciat
-
 ### Use Case Summary
 Electronic Travel Authorization (eTA/ETA) systems, such as those used in the UK, Canada, and the upcoming EU ETIAS (ETIAS is the new travel authorisation for visa-exempt travellers to enter European countries), are increasingly moving toward integration with digital wallets such as the EU Digital Identity Wallet. These wallets allow travellers to securely store, present, and verify their authorization status digitally rather than relying on paper printouts or passport-only checks. Moreover, by having a trusted and qualified provider of ETA attestations, standardisation of ETA presentations can be achieved, allowing the traveller to use a single ETA attestation for multiple systems (e.g. for travelling to the UK and Canada).
 
