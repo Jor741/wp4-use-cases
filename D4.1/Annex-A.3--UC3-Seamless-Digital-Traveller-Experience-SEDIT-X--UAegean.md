@@ -1,6 +1,6 @@
-# Annex A — UC 3: Seamless Digital Traveller Experience (SEDIT-X) (UAegean)
+## Annex A — UC 3: Seamless Digital Traveller Experience (SEDIT-X) (UAegean)
 
-## Use Case Summary
+### Use Case Summary
 
 The **Seamless Digital Traveller Experience (SEDIT-X)** use case demonstrates how the **EUDI Wallet** can support a continuous, privacy-preserving, and cross-sector traveller journey spanning **air transport, urban mobility, ferry transport, hospitality, and university access**.
 
@@ -27,15 +27,15 @@ More specifically, the use case focuses on:
 - **privacy-preserving verification**, including **1:1 biometric verification** in airport scenarios where applicable; and
 - **wallet-mediated payments** where the pilot includes payment-enabled steps.
 
-## UC User Story
+### UC User Story
 
-### Persona 1 – Flight Passenger
+#### Persona 1 – Flight Passenger
 
 As an EU citizen, I want to store my identity credential and air-travel credentials in my EUDI Wallet, so that I can prepare my trip digitally without carrying paper documents or repeatedly entering personal data.
 
 As an EU citizen, I want to use my EUDI Wallet at airport check-in, baggage drop-off, security, and boarding, so that my airport journey becomes faster, safer, and more convenient.
 
-### Persona 2 – Ferry Passenger / Tourist
+#### Persona 2 – Ferry Passenger / Tourist
 
 As a traveller continuing my journey by ferry, I want to receive my ferry boarding credentials in the same wallet environment and use them for fast ticket validation and boarding, so that I can move across transport modes without changing process or identity channel.
 
@@ -43,27 +43,27 @@ As a traveller, I want verified student or disability discounts to be applied au
 
 Where I travel with a vehicle, I want the corresponding vehicle-related credential to be usable in the same wallet-supported journey, so that booking and boarding remain integrated.
 
-### Persona 3 – Hotel Guest
+#### Persona 3 – Hotel Guest
 
 As a hotel guest, I want to identify myself and check in or check out using my EUDI Wallet with selective disclosure of only the necessary attributes, so that my stay is more paperless, privacy-preserving, and efficient.
 
 As a hotel guest, I want my booking reference to be available through the wallet and reusable during the stay, so that check-in, room access, and related hotel services can progressively become more automated.
 
-### Persona 4 – Traveller with Disabilities
+#### Persona 4 – Traveller with Disabilities
 
 As a traveller with disabilities, I want to selectively disclose verified accessibility-related credentials from my wallet, so that service providers can offer the appropriate support without requiring me to expose unnecessary personal or medical information.
 
-### Persona 5 – Student at Destination
+#### Persona 5 – Student at Destination
 
 As a student travelling to the University of the Aegean or another ERUA institution, I want to use my academic credentials from the wallet for campus access and student services, so that I can integrate smoothly into academic life without extra registration steps.
 
-### Persona 6 – Mobile-First Traveller
+#### Persona 6 – Mobile-First Traveller
 
 As a digitally native traveller, I want to use the EUDI Wallet as a one-stop interaction channel for identity, travel entitlements, and selected payments, so that my journey is simpler, faster, and more privacy-preserving.
 
-## Actors
+### Actors
 
-### Credential Issuers
+#### Credential Issuers
 
 - **National PID issuers / eID authorities** issue the Person Identification Data (PID) credential used as the root identity credential in the journey.
 - **Airline / airline booking platform** issues the boarding pass credential and related air-travel credentials.
@@ -75,7 +75,7 @@ As a digitally native traveller, I want to use the EUDI Wallet as a one-stop int
 - **Competent authorities / recognised organisations** issue accessibility or disability attestations.
 - **Payment ecosystem actors / PSP-side systems** support payment confirmations and e-receipts where relevant.
 
-### Relying Parties / Verifiers
+#### Relying Parties / Verifiers
 
 - **Thessaloniki Airport / Fraport Greece** acts as verifier across airport touchpoints.
 - **Airport and airline operational systems**, including check-in, baggage, security, and gate systems, verify boarding entitlement and identity binding.
@@ -84,13 +84,13 @@ As a digitally native traveller, I want to use the EUDI Wallet as a one-stop int
 - **University service providers** verify academic credentials for access to campus services and facilities.
 - **Urban mobility providers** verify payment or entitlement information where relevant.
 
-### Intermediary / Coordination Actors
+#### Intermediary / Coordination Actors
 
 - **EUDIW Intermediary Service** acts as the main integration layer between wallet protocols and domain systems, especially in the airport, ferry, and hotel episodes.
 - **Decentralized Travel Booking Network / booking-state layer** may support dynamic booking-state management and synchronisation across suppliers in parts of the use case where such capability is piloted.
 - **Technology providers** may supply issuance, verification, orchestration, proximity, or integration components needed by the participating partners.
 
-## Context and Preconditions
+### Context and Preconditions
 
 The following conditions are assumed for the use case to begin:
 
@@ -108,7 +108,7 @@ The following conditions are assumed for the use case to begin:
 - The University of the Aegean or another participating academic institution can verify the required academic credentials for campus access.
 - All participating parties operate within a common trust, legal, and interoperability framework aligned with the EUDI Wallet architecture.
 
-## Credentials Involved
+### Credentials Involved
 
 1. **Person Identification Data (PID)**  
    A high-assurance identity credential issued by a national authority and stored in the EUDI Wallet. It is used for identity verification, binding to travel credentials, and trust establishment across the journey.
@@ -140,9 +140,9 @@ The following conditions are assumed for the use case to begin:
 10. **Optional stay or access credentials**  
    In more advanced hospitality or university variants, SEDIT-X may explore additional credentials for room access, proof of stay, or service entitlements.
 
-## User Journey (Business Flow of Events)
+### User Journey (Business Flow of Events)
 
-### Phase 0 – Wallet Setup and Pre-Travel Provisioning
+#### Phase 0 – Wallet Setup and Pre-Travel Provisioning
 
 1. The traveller installs and activates a conformant EUDI Wallet.
 2. The traveller obtains a PID credential and stores it in the wallet.
@@ -150,7 +150,7 @@ The following conditions are assumed for the use case to begin:
 4. The traveller books the relevant transport and, where applicable, hotel services.
 5. Wallet-based payment functionality is available for scenarios requiring digital payment during the journey.
 
-### Phase 1 – Airport Journey (Thessaloniki Airport)
+#### Phase 1 – Airport Journey (Thessaloniki Airport)
 
 6. Before arriving at the airport, the traveller completes flight check-in and receives a **boarding pass credential** in the wallet.
 7. Depending on the airport pilot path, the traveller may:
@@ -165,13 +165,13 @@ The following conditions are assumed for the use case to begin:
 14. Where the pilot uses biometric-enhanced mode, a **1:1 biometric verification** step may be performed before the traveller is allowed to proceed.
 15. Optional airport services may use verified entitlements from the wallet, for example accessibility-related support or lounge access.
 
-### Phase 2 – Urban Mobility (Athens)
+#### Phase 2 – Urban Mobility (Athens)
 
 16. After arrival, the traveller uses a participating urban-mobility service.
 17. In the present specification, this episode is treated at a **high level** and focuses mainly on a wallet-mediated payment interaction for a city-transport service such as a taxi.
 18. The traveller proceeds to the next stage of the journey.
 
-### Phase 3 – Ferry Transport
+#### Phase 3 – Ferry Transport
 
 19. The traveller books a ferry trip via a ferry operator or participating travel agency.
 20. Ferry boarding credentials are issued to the wallet.
@@ -180,7 +180,7 @@ The following conditions are assumed for the use case to begin:
 23. At the port, the traveller presents the wallet for proximity-based boarding validation.
 24. The operator verifies the boarding entitlement(s) and allows passage.
 
-### Phase 4 – Hospitality
+#### Phase 4 – Hospitality
 
 25. The traveller books accommodation through a booking environment, directly or via a travel agent and DMC.
 26. During booking, the traveller may use the wallet to provide verified identity data needed to complete the reservation.
@@ -193,18 +193,18 @@ The following conditions are assumed for the use case to begin:
 33. During the stay, booking and entitlement state may be updated to support hotel operations or guest services.
 34. At departure, the traveller completes digital or assisted check-out.
 
-### Phase 5 – University Access
+#### Phase 5 – University Access
 
 35. The traveller arrives at the university destination.
 36. The traveller presents student or alliance-related credentials from the wallet.
 37. The university verifies the credentials and grants access to the relevant campus services, facilities, or events.
 38. The journey concludes with the traveller onboarded into the academic environment without additional paper-based onboarding steps.
 
-## Technical Flow
+### Technical Flow
 
 SEDIT-X reuses a common wallet interaction pattern across domains. The technical architecture is based on standard wallet issuance and verification flows, combined with domain-specific integrations and, where required, payment and biometric subsystems.
 
-### Common Pattern A – Wallet-Based Verification (OpenID4VP-style)
+#### Common Pattern A – Wallet-Based Verification (OpenID4VP-style)
 
 1. A service provider backend acting as **Verifier / Relying Party** initiates a verification request.
 2. The request is delivered to the user’s wallet through a supported engagement method such as QR, deep link, redirect, or proximity interaction.
@@ -222,7 +222,7 @@ SEDIT-X reuses a common wallet interaction pattern across domains. The technical
    - policy satisfaction and attribute sufficiency.
 7. The verifier returns a decision to the operational system, which then allows progression or triggers fallback handling.
 
-### Common Pattern B – Credential Issuance (OpenID4VCI-style)
+#### Common Pattern B – Credential Issuance (OpenID4VCI-style)
 
 1. A domain system determines that a new credential should be issued to the traveller.
 2. The issuing system or intermediary creates a credential offer.
@@ -231,9 +231,9 @@ SEDIT-X reuses a common wallet interaction pattern across domains. The technical
 5. The issuer returns the credential.
 6. The wallet validates and stores it for later presentation.
 
-### Episode-Specific Technical Highlights
+#### Episode-Specific Technical Highlights
 
-#### Episode 1 – Smart Airport
+##### Episode 1 – Smart Airport
 
 The airport episode uses an **EUDIW Intermediary Service** to bridge wallet protocols with airport operational systems.
 
@@ -249,13 +249,13 @@ At security and boarding, the operational system verifies the presented evidence
 
 The core implementation principle is that the airport does not embed wallet logic separately in each touchpoint; instead, the **intermediary centralises issuance, verification, trust checks, status checks, eligibility checks, and biometric orchestration**.
 
-#### Episode 2 – Urban Mobility
+##### Episode 2 – Urban Mobility
 
 The urban-mobility episode is deliberately lighter in the present UC specification. It serves mainly as a continuity step between arrival and the next stage of the journey, focusing on **wallet-mediated payment** for a participating transport service.
 
 This episode may use either remote or proximity-style interaction depending on the provider and the implementation selected during the pilot.
 
-#### Episode 3 – Ferry Transport
+##### Episode 3 – Ferry Transport
 
 The ferry episode follows the same general architectural approach as the other SEDIT-X transport domains, using the **EUDIW Intermediary Service** as the integration layer between wallet protocols and operator-side booking, ticketing, and boarding systems.
 
@@ -269,7 +269,7 @@ At the port, the intended interaction model is a **proximity-based presentation 
 
 The verifier checks that the boarding entitlement is valid for the specific journey and, where relevant, that the vehicle-related credential is consistent with the booking. The verified result is then used to support a fast operational boarding decision.
 
-#### Episode 4 – Hospitality
+##### Episode 4 – Hospitality
 
 The hotel episode uses the wallet in two main stages:
 
@@ -288,7 +288,7 @@ Because hotel technical environments are heterogeneous, the pilot explicitly rec
 
 In more advanced variants, additional capabilities such as room-access credentials, dynamic booking-state updates, or further automated hotel interactions may also be explored.
 
-#### Episode 5 – University Access
+##### Episode 5 – University Access
 
 The university episode follows the same general wallet logic:
 
@@ -298,9 +298,9 @@ The university episode follows the same general wallet logic:
 - the verifier validates trust, integrity, status, and freshness,
 - the verified result is used to grant federated access to campus services and facilities.
 
-## Flow Diagrams
+### Flow Diagrams
 
-### Common Verification Pattern
+#### Common Verification Pattern
 
 ```mermaid
 sequenceDiagram
@@ -321,7 +321,7 @@ sequenceDiagram
   FE->>User: PASS / FAIL / Manual fallback
 ```
 
-### Episode 1 – Airport Boarding Pass Issuance and Check-in
+#### Episode 1 – Airport Boarding Pass Issuance and Check-in
 
 ```mermaid
 sequenceDiagram
@@ -341,7 +341,7 @@ sequenceDiagram
   DCS-->>Wallet: Verification result via airport systems
 ```
 
-### Episode 3 – Ferry Boarding
+#### Episode 3 – Ferry Boarding
 
 ```mermaid
 sequenceDiagram
@@ -360,7 +360,7 @@ sequenceDiagram
   Gate-->>User: Boarding allowed
 ```
 
-### Episode 4 – Hotel Check-in
+#### Episode 4 – Hotel Check-in
 
 ```mermaid
 sequenceDiagram
@@ -380,7 +380,7 @@ sequenceDiagram
   Hotel-->>User: Continue with key / room assignment flow
 ```
 
-### Episode 5 – University Access
+#### Episode 5 – University Access
 
 ```mermaid
 sequenceDiagram
@@ -400,7 +400,7 @@ sequenceDiagram
   UniRP-->>User: Access granted
 ```
 
-## Unhappy Paths
+### Unhappy Paths
 
 1. **Wallet not installed / not activated**  
    Trigger: The traveller arrives without an activated wallet.  
@@ -467,7 +467,7 @@ sequenceDiagram
     Outcome: Fully automated self-service flow is not possible.  
     Fallback: Assisted or partially integrated hotel flow.
 
-## Success Criteria
+### Success Criteria
 
 The SEDIT-X UC will be considered successful if the pilot demonstrates most of the following:
 
@@ -478,7 +478,7 @@ The SEDIT-X UC will be considered successful if the pilot demonstrates most of t
 5. The pilot provides practical evidence that the EUDI Wallet can operate as a common interaction channel across transport, hospitality, and higher education.
 6. At least one realistic end-to-end traveller journey can be demonstrated across multiple episodes of the UC.
 
-## Business KPIs
+### Business KPIs
 
 The following indicators should be tracked, aligned where relevant with wider WP4 KPIs:
 
@@ -492,7 +492,7 @@ The following indicators should be tracked, aligned where relevant with wider WP
 - number of dynamic booking or entitlement-state updates, where applicable;
 - number of manual fallbacks triggered, by episode and reason.
 
-## Testing Procedures
+### Testing Procedures
 
 Testing of SEDIT-X should be conducted through the APTITUDE **Interoperability Test Bed+ (ITB+)** established under WP2, which acts as the common technical and governance environment for validating interoperability, conformance, and end-to-end functionality across partners.
 
@@ -511,7 +511,7 @@ Testing should cover at least:
 
 Where possible, testing should include both **component-level** and **end-to-end journey-level** validation.
 
-## Legal and Regulatory Aspects
+### Legal and Regulatory Aspects
 
 SEDIT-X must operate within the European framework for **digital identity, privacy, and electronic transactions**, with particular reference to **eIDAS 2.0**, the **EUDI Wallet Architecture and Reference Framework**, and sector-specific rules applicable to transport, hospitality, payments, and student mobility.
 
@@ -527,9 +527,9 @@ Key legal and regulatory considerations include:
 
 In airport use cases, biometric processing must remain strictly limited to **1:1 verification** scenarios. No **1:N identification** or large-scale centralised biometric matching should be part of the UC baseline.
 
-## Key Challenges and Considerations
+### Key Challenges and Considerations
 
-### Business and Operational Challenges
+#### Business and Operational Challenges
 
 - **Cross-sector interoperability:** airport systems, ferry platforms, hotel environments, and university systems operate with different data models, policies, and operational constraints.
 - **Operational heterogeneity:** especially in hospitality, the actual degree of automation may vary significantly depending on the maturity of local IT environments.
@@ -537,7 +537,7 @@ In airport use cases, biometric processing must remain strictly limited to **1:1
 - **Payment integration dependencies:** payment-enabled episodes introduce dependencies on external regulated actors and service availability.
 - **Accessibility by design:** flows must remain usable for diverse traveller groups, including travellers with disabilities.
 
-### Technical Challenges and Risks
+#### Technical Challenges and Risks
 
 - **Legacy-system integration:** airport DCS, ferry ticketing, hotel PMS/CRS, and university IAM systems may require adapters or façade services.
 - **Protocol and profile variability:** differences in interpretation of wallet-related protocols can create interoperability issues unless profiles are constrained and tested.
@@ -546,6 +546,6 @@ In airport use cases, biometric processing must remain strictly limited to **1:1
 - **Dynamic state management:** where dynamic booking-state or entitlement-state updates are explored, clear system boundaries and consistency rules are needed.
 - **Replay and freshness protection:** all verifier flows must correctly handle nonce, audience, validity period, and related anti-replay controls.
 
-## Notes on Scope
+### Notes on Scope
 
 This Annex A sheet specifies **what UC3 is intended to demonstrate** and **how the main flows are framed** from a business and technical perspective. It is not an implementation manual and does not attempt to define all deployment details, APIs, or final piloting results.
