@@ -51,9 +51,9 @@ _Phase 1: online check_
 5. Airweb/Irigo verify the digital signature and the integrity of the credential using the Relying Party's public key.
 6. Once the student status is confirmed, the system applies the discount and unlocks the final payment step.
 
-# Student Verification & Access Control Flow
+### Student Verification & Access Control Flow
 
-This document describes the interaction between the Student, the EUDI Wallet, and the Service Providers for both online discounts and physical access.
+This section describes the interaction between the Student, the EUDI Wallet, and the Service Providers for both online discounts and physical access.
 
 #### Online Check — Student Discount Eligibility
 
