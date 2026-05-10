@@ -1,16 +1,12 @@
 ## UC 9: Biometric Profile - Carrier Held Biometrics - for Seamless Airport Travel (IN Groupe)
 
-Use Case summary:
+### Use Case summary
 The Biometric Profile use case enables travellers to create and use a secure digital biometric identity for an end-to-end, contactless airport experience, from luggage drop to boarding.
 
-
-***UC User Story:***
-
+### UC User Story
 Description: 
 
 Through the Marseille airport’s mobile application, travellers can request the creation of their biometric profile - Carrier Held Biometric - using verified personal attributes shared from their EUDI Wallet. These attributes include:  first name, last name, date of birth, credential expiration date, credential type, nationality, and a JPEG 2000 photo. These attributes must be shared from PID and/or DTC and/or PhotoID. Once issued to the EUDI wallet in first place, this biometric profile is securely linked with the traveller’s boarding information. It allows passengers to navigate the airport journey using dedicated biometric-enabled checkpoints — from baggage drop-off and security control to boarding gates. Travelers can authenticate themselves by presenting an ISO-compliant Biometric QR Code stored in the airport app, which can be easily scanned at self-service kiosks or e-gates and proceed to face recognition. This removes the need to repeatedly show passports or boarding passes, creating a fast, intuitive, and frictionless travel experience.                                    
-
-
 ***Value Proposition:***
 
 * Enhanced passenger experience: Seamless movement through airport touchpoints using facial recognition and a single digital identity.
@@ -19,7 +15,7 @@ Through the Marseille airport’s mobile application, travellers can request the
 * Operational efficiency for airports and airlines: Reduced manual checks, improved passenger flow management, and optimized staff deployment.
 * Privacy and control: Travelers manage visibility and permissions for their personal data through the EUDI Wallet, ensuring transparency and GDPR compliance.
 
-***Actors (referencing Partners from partners list):***
+### Actors
 
 * User: a Marseille airport traveller
 * Remote and proximity relaying party: Marseille airport
@@ -27,17 +23,17 @@ Through the Marseille airport’s mobile application, travellers can request the
 * Biometric Profile Provider: IN Groupe issuance Biometric Profile attestation
 * Airport Marseille mobile application
 
-***Context & pre-conditions:*** 
+### Context & pre-conditions
 * Traveler has an EUDI Wallet on their smartphone with a DTC and/or PID with portrait and/or PhotoID
 * Traveler has installed the airport mobile app and connected to internet
 
-***Credentials involved:*** 
+### Credentials involved
 * PID with portrait
 * PhotoID
 * DTC
 * Biometric Profile Attestation
 
-***User Journey (business flow of events)***
+### User Journey (business flow of events)
 
 Step 1 – Biometric Profile Request                                                                                            
 Preconditions: Traveller has downloaded the airport mobile application, has his EUDI wallet initialized with PID, has the required credentials 
@@ -146,7 +142,7 @@ A facial recognition module verifies the traveller against the stored biometric 
 
 A final biometric verification confirms the passenger’s identity and boarding authorization.
 
-***Technical flow:*** 
+### Technical flow
 
 see mermaid sequence diagram and you can find component diagram as well
 
@@ -190,7 +186,7 @@ sequenceDiagram
 ``` 
 
 
-***Unhappy paths:***
+### Unhappy paths
 Display error message when
 1)	The required attributes are not available in the wallet
 2)	The device is disconnected when creating the Biometric Profile Attestation or Ready to travel attestation
@@ -204,7 +200,7 @@ Display error message when
 10)	Facial biometric template generation fails
 
 
-***Success Criteria:*** 
+### Success Criteria
 * Enrolment and Biometric Profile VC issuance process run end to end successfully
 * Ready to travel VC issuance process run end to end successfully
 * Remote verification process end to end run successfully
@@ -216,7 +212,7 @@ Display error message when
 * < 1.5% fails on the listed use cases
 
 
-***Business KPIs***
+### Business KPIs
 * Number of EUDI Wallets DTC sharing
 * Number of successful travellers using airport app
 * Number of checks done via airport wallet
@@ -224,12 +220,11 @@ Display error message when
 * Traveler satisfaction scores
 
 
-
-***Testing procedures:*** 
+### Testing procedures
 The solution will be tested through the interoperability testing led by the Aptitude WP4 and will as well be test with the involved partner on site at the AMP. 
 
 
-***Legal, regulatory aspects:*** 
+### Legal, regulatory aspects
 * eIDAS 2.0 compliance for attestation
 * Consent management for data sharing with agent
 * GDPR compliance for personal data processing
@@ -237,6 +232,6 @@ The solution will be tested through the interoperability testing led by the Apti
 * ARF
 
 
-***Key challenges & Considerations:***
+### Key challenges & Considerations
 * Cross border interoperability
 * Marseille Airport Biometric Gates performances, biometric capturing environment
