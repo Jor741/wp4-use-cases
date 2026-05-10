@@ -35,7 +35,6 @@ NB: While this flow uses the Disability Card as a primary example, the logic rem
 4. **Confirmation**: Mario receives the digital ticket. If the companion entitlement was verified during step 2, Mario receives another free ticket for his companion.
 
 ### Technical Flow
---------
 1. During the booking process, Mario intends to present his attributes to Trenitalia.
 2. Trenitalia system initiate the request for remote presentation. 
 3. Mario receives the request via his EUDI Wallet and selects the specific identity attributes required by Trenitalia, ensuring data minimization.
@@ -129,5 +128,3 @@ The scenario will face challenges in:
 - ensuring the correct data verification and recognition of the specific attribute for the dedicated service.
 
 **Workarounds**: the testing session will serve as a phase of prelminary preparation in order to ensure a good UX without any sort of technical issue.
-
-
