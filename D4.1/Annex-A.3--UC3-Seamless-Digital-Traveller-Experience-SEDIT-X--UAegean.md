@@ -1,4 +1,4 @@
-## Annex A — UC 3: Seamless Digital Traveller Experience (SEDIT-X) (UAegean)
+## UC 3: Seamless Digital Traveller Experience (SEDIT-X) (UAegean)
 
 ### Use Case Summary
 
