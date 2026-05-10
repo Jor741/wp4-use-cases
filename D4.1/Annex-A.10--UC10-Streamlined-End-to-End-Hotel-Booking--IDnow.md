@@ -1,4 +1,4 @@
-# Annex A.10 — UC 10: Streamlined End-to-End Hotel Booking (IDnow)
+## UC 10: Streamlined End-to-End Hotel Booking (IDnow)
 
 ### Objective
 Enable a fully paperless, privacy-preserving hotel journey — from online booking to room access and legally mandated guest registration — using the European Digital Identity Wallet (EUDIW) as the single carrier of the guest's identity and stay-related credentials. UC 10 demonstrates the combined use of PID with three IDnow-issued Electronic Attestations of Attributes (EAAs) across both online (web) and proximity (QR/NFC/BLE, partly offline) verification flows.
