@@ -30,7 +30,7 @@ In this way, students across Europe could easily access services in a simplified
 - **PID (Personal Identification Data)**: to verify name, age and nationality.
 - **Student Card:** issued by Polimi and GYSC to verify the student status.
 
-## User journey
+### User journey
 _Transportation service_
 1. **Booking**: Luca and Paul want to purchase a ticket via website/app, knowing that they offer discounted fares for students. At the checkout, Luca and Paul select student fare. 
 2. **Requirements checking**: Airweb require the student attestation (for example by showing a QR-code that need for verification, or a deep-link to the EUDIW- app-to-app)
