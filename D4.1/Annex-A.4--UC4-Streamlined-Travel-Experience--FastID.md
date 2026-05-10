@@ -12,8 +12,6 @@ FastID
 ### UC Domain
 Streamlined Travel Experience
 
----
-
 ## UC Summary
 
 UC4 focuses on the use of wallet credentials for airport access in a controlled Schiphol Lab environment. The scenario looks at how a verified identity can be reused to issue and present access credentials for both visitors and employees entering restricted airport areas.
@@ -24,13 +22,12 @@ At the access point, the user presents the credential through QR or proximity sh
 
 The use case demonstrates how wallet identity and access rights can be combined in an airport access flow using EUDI Wallet components.
 
----
 
 ## User Story
 
 “As an airport employee or visitor, I want to use my wallet credential to access airport areas without depending only on physical badges or repeated manual identity checks.”
 
----
+
 
 ## Actors
 
@@ -40,7 +37,7 @@ The use case demonstrates how wallet identity and access rights can be combined 
 - **Credential Issuer**: FastID issuing the airport access credential
 - **Relying Party**: airport access system in the Schiphol Lab setup
 
----
+
 
 ## Context and Preconditions
 
@@ -49,7 +46,7 @@ The use case demonstrates how wallet identity and access rights can be combined 
 - A PID and DTC are available in the wallet.
 - An airport access credential has been issued.
 
----
+
 
 ## Credentials Involved
 
@@ -57,7 +54,7 @@ The use case demonstrates how wallet identity and access rights can be combined 
 - DTC derived from the PID
 - Airport access credential
 
----
+
 
 ## User Journey
 
@@ -75,7 +72,7 @@ The user arrives at an airport access point and presents the credential using QR
 
 The airport system checks the credential validity and access rights before granting or denying access.
 
----
+
 
 ## Technical Flow
 
@@ -99,7 +96,7 @@ The airport system checks the credential validity and access rights before grant
    - access rights
 4. Access is granted or denied depending on the result
 
----
+
 
 ## Unhappy Paths
 
@@ -120,7 +117,7 @@ The airport system checks the credential validity and access rights before grant
 - Successful issuance of airport access credential
 - Successful verification at airport access points
 
----
+
 
 ## Testing Procedures
 
@@ -129,7 +126,7 @@ The airport system checks the credential validity and access rights before grant
 - Revocation and expiration testing
 - Controlled pilot testing in the Schiphol Lab setup
 
----
+
 
 ## Key Challenges & Considerations
 
@@ -139,7 +136,7 @@ The airport system checks the credential validity and access rights before grant
 - Trust validation within the pilot environment
 - Operational usability in airport scenarios
 
----
+
 
 ## Technical Challenges & Risks
 
