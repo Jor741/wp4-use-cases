@@ -93,6 +93,56 @@ The system checks validity and access rights before granting entry. In some case
 4. Access is granted or denied  
 5. Optional biometric verification may be performed  
 
+```mermaid
+sequenceDiagram
+    autonumber
+
+    actor F as Fan / Employee
+    participant W as FastID Wallet
+    participant I as Credential Issuer (N.E.C.)
+    participant A as Stadium Access System
+    participant T as Trust Infrastructure
+
+    Note over F,T: Phase 1 - Account Setup and Credential Issuance
+
+    F->>A: Create account / register for stadium access
+    A-->>F: Generate QR code with credential request
+
+    F->>W: Scan QR code
+    W->>W: Extract credential request
+
+    F->>W: Scan passport or ID document
+    W->>W: Verify identity document
+    W->>W: Create PID from verified identity (internal)
+    W->>W: Generate DTC from PID
+
+    I->>W: Request required attributes (ticket / eligibility)
+    W-->>F: Show sharing request
+    F->>W: Approve attribute sharing + consent
+
+    W->>I: Send verifiable presentation of attributes (based on DTC)
+    I->>I: Derive access credential
+    I-->>W: Issue stadium access credential
+
+    W-->>F: Store credential in wallet
+
+    Note over F,T: Phase 2 - Stadium Entry Verification
+
+    F->>A: Present credential via QR / NFC / BLE
+
+    A->>T: Validate issuer trust
+    T-->>A: Trust validation result
+
+    A->>A: Check credential validity
+    A->>A: Check access rights (bound to DTC)
+
+    alt Credential valid
+        A-->>F: Access granted
+    else Credential invalid or revoked
+        A-->>F: Access denied
+    end
+```
+
 ## Unhappy Paths
 
 1. Identity verification fails during onboarding  
