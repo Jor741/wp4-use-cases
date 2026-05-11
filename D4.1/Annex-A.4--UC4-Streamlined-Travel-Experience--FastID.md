@@ -96,7 +96,57 @@ The airport system checks the credential validity and access rights before grant
    - access rights
 4. Access is granted or denied depending on the result
 
+```mermaid
+sequenceDiagram
+    autonumber
 
+    actor E as Employee
+    actor U as Visitor
+    participant W as FastID Wallet
+    participant I as Credential Issuer
+    participant A as Airport Access System
+    participant T as Trust Infrastructure
+
+    Note over E,T: Phase 1 - Visitor Registration and Credential Issuance
+
+    E->>A: Register visitor in access system
+    A-->>E: Generate QR code with credential request
+
+    E->>U: Share QR code
+
+    U->>W: Scan QR code
+    W->>W: Extract credential request
+
+    U->>W: Scan passport or ID document
+    W->>W: Verify identity document
+    W->>W: Create PID from verified identity
+    W->>W: Generate DTC from PID
+
+    I->>W: Request required attributes
+    W-->>U: Show sharing request
+    U->>W: Approve attribute sharing
+
+    W->>I: Send verifiable presentation of attributes (Based on DTC)
+    I-->>W: Issue airport access credential
+
+    W-->>U: Store credential in wallet
+
+    Note over U,T: Phase 2 - Airport Access Verification
+
+    U->>A: Present credential via QR / NFC / BLE
+
+    A->>T: Validate issuer trust
+    T-->>A: Trust validation result
+
+    A->>A: Check credential validity
+    A->>A: Check access rights
+
+    alt Credential valid
+        A-->>U: Access granted
+    else Credential invalid or revoked
+        A-->>U: Access denied
+    end
+```
 
 ## Unhappy Paths
 
