@@ -10,6 +10,8 @@ Entries are organised into six sections, within each section, entries are listed
 
 **AML / KYC** — Anti-Money-Laundering / Know-Your-Customer. Bodies of obligation that apply at the payment touchpoints of WP4 use cases coordinated with WP6.
 
+**AMP** L’AÉROPORT DE MARSEILLE PROVENCE, referenced in UC 9.
+
 **[API](https://www.icao.int/sites/default/files/TRIP/Publications/WCO-IATA-ICAO-API-Guidelines.pdf)** *(border-control sense)* — Advance Passenger Information. Passenger-and-document data that airlines must transmit to border authorities prior to inbound flights, as governed by Regulation (EU) 2025/12 and its predecessors.
 
 **API** *(software development)* — Application Programming Interface. The general meaning is also used in the deliverable when describing wallet, intermediary, and back-office integrations.
