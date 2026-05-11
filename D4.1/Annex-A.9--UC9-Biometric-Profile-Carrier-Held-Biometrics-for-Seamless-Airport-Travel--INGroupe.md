@@ -221,7 +221,7 @@ Display error message when
 
 
 ### Testing procedures
-The solution will be tested through the interoperability testing led by the Aptitude WP4 and will as well be test with the involved partner on site at the L’AÉRO PORT
+The solution will be tested through the interoperability testing led by the Aptitude WP4 and will as well be test with the involved partner on site at the L’AÉROPORT
 DE MARSEILLE PROVENCE (AMP). 
 
 
