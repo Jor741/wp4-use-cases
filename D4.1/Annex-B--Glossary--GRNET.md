@@ -1,4 +1,4 @@
-# Annex C: Glossary
+# Annex B: Glossary
 
 This annex presents all terms, concepts, standards, protocols, regulatory instruments, organisations, and acronyms used throughout deliverable D4.1. It expands the key definitions introduced in @sec-2_5 and provides a single reference point for readers moving between the main chapters and the Use Case specification sheets in Annex A.
 
@@ -9,6 +9,8 @@ Entries are organised into six sections, within each section, entries are listed
 **[AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** — The EU Artificial Intelligence Act, Regulation (EU) 2024/1689. Introduces harmonised rules for AI systems, including specific constraints on biometric identification systems. Relevant for UC 9 and SEDIT-X Episode 1.
 
 **AML / KYC** — Anti-Money-Laundering / Know-Your-Customer. Bodies of obligation that apply at the payment touchpoints of WP4 use cases coordinated with WP6.
+
+**AMP** L’AÉROPORT DE MARSEILLE PROVENCE, referenced in UC 9.
 
 **[API](https://www.icao.int/sites/default/files/TRIP/Publications/WCO-IATA-ICAO-API-Guidelines.pdf)** *(border-control sense)* — Advance Passenger Information. Passenger-and-document data that airlines must transmit to border authorities prior to inbound flights, as governed by Regulation (EU) 2025/12 and its predecessors.
 

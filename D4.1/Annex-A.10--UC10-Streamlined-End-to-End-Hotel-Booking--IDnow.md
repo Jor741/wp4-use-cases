@@ -1,4 +1,4 @@
-# Annex A.10 — UC 10: Streamlined End-to-End Hotel Booking (IDnow)
+## UC 10: Streamlined End-to-End Hotel Booking (IDnow)
 
 ### Objective
 Enable a fully paperless, privacy-preserving hotel journey — from online booking to room access and legally mandated guest registration — using the European Digital Identity Wallet (EUDIW) as the single carrier of the guest's identity and stay-related credentials. UC 10 demonstrates the combined use of PID with three IDnow-issued Electronic Attestations of Attributes (EAAs) across both online (web) and proximity (QR/NFC/BLE, partly offline) verification flows.
@@ -160,7 +160,7 @@ _Phase 4: Authority reporting_
 - **Unhappy Path 4 — Door reader verification fails offline** (e.g., expired Room Key EAA, key binding failure, cached key outdated): access denied; the guest is directed to reception, where a manual key card is issued and the door reader is force-synced.
 - **Unhappy Path 5 — Cross-border PID trust resolution fails** (federated TIL unreachable or guest's PID issuer not federated): the hotel falls back to manual identity check using a physical ID document.
 
-### *Success Criteria
+### Success Criteria
 - End-to-end completion of booking → check-in → room access → authority reporting using the EUDIW as the sole identity and credential carrier.
 - Correct verification of all IDnow-issued EAAs by the Booking Platform, hotel system, door reader, and authority interface.
 - Successful offline verification of the Digital Room Key EAA at the door reader within the booked stay window.
@@ -183,7 +183,7 @@ _Phase 4: Authority reporting_
 
 These procedures will focus on the four wallet interactions defining UC 10 (booking-time PID, check-in PID + Booking Confirmation, door Room Key, authority Guest Summary). The test environment, participant criteria, and exact test data will be finalised together with WP2 and the hotel partner as implementation progresses.
 
-### Legal & regulatory aspects
+### Legal, regulatory aspects
 
 UC 10 demonstrates:
 - strict adherence to **eIDAS 2.0** and the **ARF** for issuance and presentation of EAAs via the EUDIW, with EAAs signed under a qualified electronic seal by IDnow as QTSP;

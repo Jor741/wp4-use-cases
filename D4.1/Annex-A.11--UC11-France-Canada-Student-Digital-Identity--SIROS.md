@@ -1,10 +1,6 @@
 ## UC 11: France-Canada Student Digital Identity (SIROS)
 
-## A.11 Use Case Specification Sheet — UC 11: France–Canada Student Digital Identity
-
-*Follows the standardised UC template described in Section 3.1. All fields from the template are populated below; supplementary fields (business requirements, non-functional requirements, solution design) are included for completeness of the annex entry.*
-
-### A.11.1 Identification
+#### Identification
 
 | Field | Value |
 |---|---|
@@ -15,17 +11,17 @@
 | Use Case Lead | SIROS Foundation |
 | Partners | ANTS (France), GYSC (France), DIACC (Canada), Quebec regional government (Canada) |
 
-### A.11.2 Use Case Summary
+### Use Case Summary
 
 UC 11 pilots the technical integration between the EU digital-identity ecosystem and the Canadian digital-identity ecosystem, with a first focus on the Quebec region. A French student uses the European Digital Identity Wallet (EUDIW) and credentials issued in the EU — a Personal Identification Data (PID) credential and a student Electronic Attestation of Attributes (EAA) — to access services offered by Canadian relying parties. The initial relying-party scope covers universities and student housing, with possible extensions to government services and student discounts on public transport.
 
 The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA can be understood by non-EU relying parties in Canada and Quebec without requiring the student to fall back on paper, (b) to surface the legal, semantic and technical trigger points that currently prevent full EU–Canada digital-identity interoperability, and (c) to establish a reference flow that can be extended in later phases to further relying parties and credentials.
 
-### A.11.3 User Story
+### User Story
 
 > *"As a French student travelling to the Quebec region to study, I want to use my EUDIW to show that I am a French national, that I am a student in France, and that I will be a student in Canada, so that I can enrol at the university, enrol in student housing, and access student discounts using my wallet."*
 
-### A.11.4 Actors
+### Actors
 
 | Role | Organisation / entity | Side | Responsibilities in UC 11 |
 |---|---|---|---|
@@ -41,7 +37,7 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 | Regional partner | Quebec regional government | Canada (Quebec) | Cooperation arrangement (ANTS–Quebec) underpins the pilot |
 | EU-side coordinator | SIROS Foundation | EU | UC lead; coordinates EU-side delivery |
 
-### A.11.5 Context and Pre-conditions
+### Context and Pre-conditions
 
 - Marie holds an EUDIW issued under the French framework, installed on her smartphone, containing a verified PID.
 - Marie holds a valid GYSC student credential in the same EUDIW.
@@ -49,7 +45,7 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 - A pilot-scope cooperation arrangement is in place between the EU-side and Canadian-side parties, building on the ANTS–Quebec and SIROS–DIACC arrangements.
 - Marie can access the institution's student facilities and enrol in the student-housing system via the wallet-based flow.
 
-### A.11.6 Credentials Involved
+### Credentials Involved
 
 | Credential | Type | Issuer | Purpose in UC 11 | Format |
 |---|---|---|---|---|
@@ -57,7 +53,7 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 | Student card | EAA | GYSC | Prove EU student status | ARF-aligned (Q)EAA profile; format `[TBC]` |
 | Student diploma (optional, later) | EAA | French higher-education issuer | Evidence of qualifications for academic recognition | ARF-aligned (Q)EAA profile; format `[TBC]` |
 
-### A.11.7 User Journey — Business Flow
+### User Journey — Business Flow
 
 1. Marie has been admitted to a Canadian university in Quebec and is preparing her arrival.
 2. Marie authenticates to the university portal and/or the student-housing portal by presenting her PID via the EUDIW, establishing that she is a French national.
@@ -65,7 +61,7 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 4. Marie presents her GYSC student card via the EUDIW.
 5. The relying party accepts the presented credentials, completes the enrolment or housing-allocation step, and (where applicable) guides Marie through any remaining EU-citizen-specific follow-on procedure.
 
-### A.11.8 Technical Flow
+### Technical Flow
 
 1. Marie logs into a Canadian relying-party portal; the portal initiates a presentation request via OpenID4VP (or the ARF-profiled equivalent) for the PID.
 2. The EUDIW prompts Marie for consent; on approval, the PID (with only the attributes required by the relying party) is presented.
@@ -75,7 +71,7 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 6. The relying party's verifier validates the EAA using the same mechanics.
 7. The relying party records the validated attributes and proceeds with enrolment or housing allocation.
 
-### A.11.9 Alternative / Unhappy Paths
+### Alternative / Unhappy Paths
 
 | # | Trigger | Behaviour |
 |---|---|---|
@@ -85,19 +81,19 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 | UP-04 | User declines consent to a presentation | Flow halts; relying party offers the paper-based alternative |
 | UP-05 | Credential presentation fails for a technical reason (device, connectivity, expired keys) | Retry; if unresolved, fallback to paper; logged |
 
-### A.11.10 Success Criteria
+### Success Criteria
 
 - The Canadian relying party correctly interprets the PID as evidence of French nationality.
 - The Canadian relying party correctly validates the GYSC student credential.
 - Technical integration of the EUDIW with the Canadian-side verifier component is achieved end-to-end.
 
-### A.11.11 Business KPIs (aligned with WP4)
+### Business KPIs (aligned with WP4)
 
 - ≥ 3 cross-border transactions completed during the pilot.
 - ≥ 2 EU-issued wallets in use.
 - ≥ 1 PID and ≥ 2 EAAs in scope (one of which may be a PUBEAA).
 
-### A.11.12 Business Requirements
+### Business Requirements
 
 | ID | Requirement |
 |---|---|
@@ -107,7 +103,7 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 | UC11-BR-04 | A documented fallback path shall exist for the case where a relying party cannot validate a credential, so that the student is not denied service. |
 | UC11-BR-05 | The pilot shall produce evidence sufficient to document the EU–Canada regulatory, semantic and technical gaps encountered, for downstream policy and technical follow-up. |
 
-### A.11.13 Non-Functional Requirements
+### Non-Functional Requirements
 
 | ID | Category | Requirement |
 |---|---|---|
@@ -121,7 +117,7 @@ The UC's objectives are (a) to demonstrate that EU-issued PID and student EAA ca
 | UC11-NFR-08 | Resilience | Where a relying party cannot validate or interpret a credential, a defined fallback path shall be triggered (see A.11.9). |
 | UC11-NFR-09 | Scalability | The technical design shall not preclude a later extension to additional relying parties and credentials. |
 
-### A.11.14 Solution Design (Overview)
+### Solution Design (Overview)
 
 The solution comprises EU-side issuance (French government issuing PID via ANTS; GYSC issuing the student EAA) and Canadian-side verification (relying-party verifier components operated by universities and student-housing providers). A bridging layer for cross-border trust is prototyped as part of the pilot, building on the ANTS–Quebec cooperation arrangement and the SIROS–DIACC arrangement. Where Canadian relying parties lack native verifier support, the consortium provides an open-source verifier.
 
@@ -136,7 +132,7 @@ The solution comprises EU-side issuance (French government issuing PID via ANTS;
 
 Detailed ARF alignment, credential formats, issuance/verification/revocation flows, selective disclosure, trust framework, and standards are specified in Sections 7.1.11–7.6.11.
 
-### A.11.15 Testing Procedures
+### Testing Procedures
 
 | Activity | Scope |
 |---|---|
@@ -148,7 +144,7 @@ Detailed ARF alignment, credential formats, issuance/verification/revocation flo
 | Security tests | Replay / clone / MITM resistance on both EU and Canadian sides |
 | Cross-border tests | Trust-list resolution, revocation checks across jurisdictions |
 
-### A.11.16 Legal and Regulatory Aspects
+### Legal and Regulatory Aspects
 
 UC 11 does not expect full EU–Canada regulatory alignment within the pilot; a stated purpose is to surface the legal trigger points. On the EU side, eIDAS 2.0 and its Implementing Acts, the GDPR, and the ARF apply in full. On the Canadian side, PIPEDA (federal), Quebec's Act respecting the protection of personal information in the private sector as amended by Law 25 (provincial), and sectoral rules applicable to higher education, student housing and public transport apply. The DIACC Pan-Canadian Trust Framework (PCTF) is the de-facto reference framework for Canadian-side assurance.
 
@@ -156,7 +152,7 @@ Cross-border issues to be documented during the pilot include: (i) mutual recogn
 
 Section 6.2.3 of the main body carries the consolidated review input.
 
-### A.11.17 Key Challenges and Considerations
+### Key Challenges and Considerations
 
 | # | Challenge / consideration |
 |---|---|
@@ -166,7 +162,7 @@ Section 6.2.3 of the main body carries the consolidated review input.
 | KC-04 | A Canadian relying party has not yet been formally onboarded; DIACC is coordinating outreach. |
 | KC-05 | Pre-pilot baseline metrics (for the D4.3 comparison) are not yet captured. |
 
-### A.11.18 Technical Challenges and Risks
+### Technical Challenges and Risks
 
 | # | Risk | Mitigation |
 |---|---|---|
@@ -177,7 +173,7 @@ Section 6.2.3 of the main body carries the consolidated review input.
 | TR-05 | ARF profile instability during pilot preparation (WP4 Risk 5) | Track WP2 D2.1 profile decisions; treat format choices as `[TBC]` until stable |
 | TR-06 | Regulatory change in Canada or Quebec during pilot | Document legal context as of a defined cut-off; escalate any material change to the WP4 steering group |
 
-### A.11.19 Dependencies and Open Items
+### Dependencies and Open Items
 
 | # | Item | Depends on / owned by | Target |
 |---|---|---|---|
@@ -190,9 +186,7 @@ Section 6.2.3 of the main body carries the consolidated review input.
 | OI-07 | Cross-border trust-bridging mechanism selection | UC lead + DIACC | At detailed design |
 | OI-08 | Canadian-side verifier deployment plan (incl. open-source delivery) | UC lead + onboarded relying parties | Before pilot start |
 
-
-
-### A.11.20 Diagram flow
+### Diagram flow
 ```mermaid
 sequenceDiagram
     actor Marie

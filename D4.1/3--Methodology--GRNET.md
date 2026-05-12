@@ -30,4 +30,4 @@ flowchart TD
     class C,G,K outputStep
 ```
 
-The chapter is organised as follows. Section 3.1 describes the stock-taking and analysis approach, explaining how the 11 use cases were arrived at and how the analysis was structured. Section 3.2 reports on stakeholder involvement, with a dedicated subsection for each of the 11 use cases so that the reader can trace, for every UC, who was consulted and by which means. Section 3.3 lists the sources and tools that supported the work, again broken down per use case to make the evidence base explicit.
+The chapter is organised as follows. Section @sec-3_1 describes the stock-taking and analysis approach, explaining how the 11 use cases were arrived at and how the analysis was structured. Section @sec-3_2 reports on stakeholder involvement, with a dedicated subsection for each of the 11 use cases so that the reader can trace, for every UC, who was consulted and by which means. Section @sec-3_3 lists the sources and tools that supported the work, again broken down per use case to make the evidence base explicit.

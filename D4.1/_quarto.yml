@@ -18,15 +18,12 @@ book:
     - 5--Current-Landscape-and-Baseline-Analysis--All-UC-leads-GRNET.qmd
     - 6--Legal-and-Regulatory-Framework--GRNET.qmd
     - 7--Technical-Foundations--All-UC-leads-GRNET.qmd
-    - 8--Description-of-the-Ecosystem-Actors-and-Roles--All-UC-leads-GRNET.qmd
     - 9--Challenges-and-Opportunities--All-UC-leads-GRNET.qmd
     - 10--Conclusions-and-Next-Steps--GRNET.qmd
   appendices:
     - Annex-A--Detailed-Use-Case-Specification-Sheets--Each-UC-lead.qmd
-    - Annex-B--List-of-WP4-Partners-and-Roles--GRNET.qmd
-    - Annex-C--Glossary--GRNET.qmd
-    - Annex-D--List-of-Authors--All.qmd
-    - Annex-E--References--All-UC-leads-GRNET.qmd
+    - Annex-B--Glossary--GRNET.qmd
+    - Annex-C--References--All-UC-leads-GRNET.qmd
 
 format:
   html:

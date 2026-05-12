@@ -12,7 +12,8 @@ The **vertical layer**, is **sector-specific regulation**. This covers the rules
 
 Certain bodies of law that apply across all three sectors are treated within the relevant sections rather than in separate dedicated subsections. This is the case for:
 
-* **General Data Protection Regulation (GDPR) and its national implementations.** Every WP4 use case processes personal data and is therefore subject to GDPR. 
+* **General Data Protection Regulation (GDPR) and its national implementations.** Every WP4 use case processes personal data and is therefore subject to GDPR.
+* **Accessibility legislation.** The European Accessibility Act (Directive 2019/882) and the Web Accessibility Directive (Directive 2016/2102) apply to the user interfaces through which wallet holders interact with relying parties. Relevant points are raised where the sector-specific discussion calls for them.
 * **Anti-money-laundering and Know-Your-Customer (AML/KYC) rules.** For use cases that include a payment step in collaboration with WP6, the relevant AML/KYC obligations are noted at the hand-off points.
 
 ### Relation to the horizontal work of WP7
