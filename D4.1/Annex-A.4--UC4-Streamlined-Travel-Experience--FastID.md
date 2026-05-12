@@ -1,13 +1,7 @@
 ## UC 4: Streamlined Travel Experience (FastID)
 
-### UC ID
-UC 4
-
 ### UC Title
 Streamlined Travel Experience for Visitors and Employees
-
-### UC Lead
-FastID
 
 ### UC Domain
 Streamlined Travel Experience
@@ -27,9 +21,7 @@ The use case demonstrates how wallet identity and access rights can be combined 
 
 “As an airport employee or visitor, I want to use my wallet credential to access airport areas without depending only on physical badges or repeated manual identity checks.”
 
-
-
-## Actors
+### Actors
 
 - **User**: airport employee or visitor using the wallet
 - **Wallet Provider**: FastID wallet
@@ -38,8 +30,7 @@ The use case demonstrates how wallet identity and access rights can be combined 
 - **Relying Party**: airport access system in the Schiphol Lab setup
 
 
-
-## Context and Preconditions
+### Context and Preconditions
 
 - The user has installed the FastID wallet.
 - The user has completed identity verification.
@@ -47,36 +38,32 @@ The use case demonstrates how wallet identity and access rights can be combined 
 - An airport access credential has been issued.
 
 
-
-## Credentials Involved
+### Credentials Involved
 
 - PID issued after identity verification
 - DTC derived from the PID
 - Airport access credential
 
 
+### User Journey
 
-## User Journey
-
-### Step 1 – Onboarding
+#### Step 1 – Onboarding
 
 The visitor or employee installs the FastID wallet and verifies their identity using a passport or identity document.
 
-### Step 2 – Credential Issuance
+#### Step 2 – Credential Issuance
 
 After identity verification a PID and DTC are created. Based on this information an airport access credential is issued into the wallet.
 
-### Step 3 – Airport Access
+#### Step 3 – Airport Access
 
 The user arrives at an airport access point and presents the credential using QR or proximity sharing.
 
 The airport system checks the credential validity and access rights before granting or denying access.
 
+### Technical Flow
 
-
-## Technical Flow
-
-### Phase 1 – Identity Verification and Issuance
+#### Phase 1 – Identity Verification and Issuance
 
 1. The user starts onboarding through the FastID wallet
 2. Identity verification is completed using a passport or identity document
@@ -86,7 +73,7 @@ The airport system checks the credential validity and access rights before grant
 6. The user approves the sharing request
 7. The airport access credential is issued and stored in the wallet
 
-### Phase 2 – Airport Access Verification
+#### Phase 2 – Airport Access Verification
 
 1. The user approaches the airport access point
 2. The credential is presented through QR or proximity sharing
@@ -148,7 +135,7 @@ sequenceDiagram
     end
 ```
 
-## Unhappy Paths
+### Unhappy Paths
 
 1. Identity verification fails during onboarding
 2. DTC generation fails
@@ -158,27 +145,22 @@ sequenceDiagram
 6. Credential is expired or revoked
 7. Access rights do not match the requested airport area
 8. Trust validation fails
----
 
-## KPIs / Success Criteria
+### KPIs / Success Criteria
 
 - Successful onboarding and PID creation
 - Successful DTC generation
 - Successful issuance of airport access credential
 - Successful verification at airport access points
 
-
-
-## Testing Procedures
+### Testing Procedures
 
 - Functional testing of issuance and verification flows
 - QR and proximity verification testing
 - Revocation and expiration testing
 - Controlled pilot testing in the Schiphol Lab setup
 
-
-
-## Key Challenges & Considerations
+### Key Challenges & Considerations
 
 - Integration between wallet flows and airport systems
 - Managing access rights for both visitors and employees
@@ -186,9 +168,7 @@ sequenceDiagram
 - Trust validation within the pilot environment
 - Operational usability in airport scenarios
 
-
-
-## Technical Challenges & Risks
+### Technical Challenges & Risks
 
 The scenario may face challenges related to:
 - integration between wallet and access systems
