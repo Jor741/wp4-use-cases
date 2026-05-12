@@ -1,4 +1,4 @@
-# Annex C: Glossary
+# Annex B: Glossary
 
 This annex presents all terms, concepts, standards, protocols, regulatory instruments, organisations, and acronyms used throughout deliverable D4.1. It expands the key definitions introduced in @sec-2_5 and provides a single reference point for readers moving between the main chapters and the Use Case specification sheets in Annex A.
 
