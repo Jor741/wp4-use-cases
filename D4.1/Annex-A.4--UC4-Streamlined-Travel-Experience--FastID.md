@@ -6,7 +6,7 @@ Streamlined Travel Experience for Visitors and Employees
 ### UC Domain
 Streamlined Travel Experience
 
-## UC Summary
+### UC Summary
 
 UC4 focuses on the use of wallet credentials for airport access in a controlled Schiphol Lab environment. The scenario looks at how a verified identity can be reused to issue and present access credentials for both visitors and employees entering restricted airport areas.
 
@@ -16,8 +16,7 @@ At the access point, the user presents the credential through QR or proximity sh
 
 The use case demonstrates how wallet identity and access rights can be combined in an airport access flow using EUDI Wallet components.
 
-
-## User Story
+### User Story
 
 “As an airport employee or visitor, I want to use my wallet credential to access airport areas without depending only on physical badges or repeated manual identity checks.”
 
