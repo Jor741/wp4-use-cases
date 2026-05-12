@@ -1,9 +1,9 @@
 ## UC 4: Streamlined Travel Experience (FastID)
 
-### UC Title
+#### UC Title
 Streamlined Travel Experience for Visitors and Employees
 
-### UC Domain
+#### UC Domain
 Streamlined Travel Experience
 
 ### UC Summary
