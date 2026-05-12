@@ -1,4 +1,4 @@
-# Annex E: References
+# Annex C: References
 
 This annex collects the project-internal references cited across D4.1. It does **not** reproduce the full inventories of standards and regulations, which are recorded directly in the chapters where they apply: technical standards in @sec-7_6, legal and regulatory instruments in @sec-6 and @sec-6_2, and the trust-framework references in @sec-7_5. 
 
@@ -8,8 +8,6 @@ The references listed below are limited to:
 * the **APTITUDE deliverables** that D4.1 either depends on, contributes to, or sits alongside in the project's deliverable arc.
 
 **Grant Agreement**
-
-
 
 |Reference|Identifier|Notes|
 |-|-|-|
@@ -30,6 +28,3 @@ The references listed below are limited to:
 |D6.1|Sprint/PI Plan and filled-in Backlog|Companion stock-taking output for the wallet payment and banking work, including the WP6 hand-off invoked by WP4 use cases with payment touchpoints (@sec-2_3_3).|
 |D7.1|Ethics Compliance Report|Project-level ethics compliance, applicable to WP4 use cases that process personal data.|
 |D8.1|Marketing, Communication and Dissemination Strategic plan|Communication and dissemination plan applicable to WP4 outputs.|
-
-
-
